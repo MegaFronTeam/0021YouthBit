@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-lg-none
+	+b.toggle-menu-mobile--js.d-xl-none
 		span
 mixin mob-mnu()
 	-
@@ -21,16 +21,18 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col-auto
-					+e.logo(href="#")
-						
-				.col.order-lg-0.order-last
+			+e.row.row
+				.col-auto.d-xl-none
+					+menu-toggle()
+				.col
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+							+e.btn.btn.btn-success.d-xl-none(href="#") Регистрация
+				.col-auto.d-none.d-xl-inline-block
+					+e.btn.btn.btn-success(href="#") Регистрация
+				.col-auto.order-xl-first
+					+e.logo(href="#")
+						+img('img/svg/header-logo.svg')
 	// end top-nav

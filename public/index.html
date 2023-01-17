@@ -11,22 +11,22 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
 					<div class="container">
-						<div class="row">
-							<div class="col-auto">
-								<a class="top-nav__logo" href="#">
-								</a>
+						<div class="top-nav__row row">
+							<div class="col-auto d-xl-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
+								</div>
 							</div>
-							<div class="col order-lg-0 order-last">
+							<div class="col">
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
-										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+										<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
 										</div>
 										<nav>
 											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
@@ -34,33 +34,28 @@
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Для кого</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кейсы</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Эксперты</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Эксперты</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Организаторы</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">FAQ</a></li>
 											</ul>
 										</nav>
+										<a class="top-nav__btn btn btn-success d-xl-none" href="#">Регистрация
+										</a>
 									</div>
 								</div>
 							</div>
-							<div class="col-auto d-lg-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-								</div>
+							<div class="col-auto d-none d-xl-inline-block">
+								<a class="top-nav__btn btn btn-success" href="#">Регистрация
+								</a>
+							</div>
+							<div class="col-auto order-xl-first">
+								<a class="top-nav__logo" href="#"><img src="img/svg/header-logo.svg" alt="" loading="lazy"/>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- end top-nav-->
-				<!-- start topLine-->
-				<div class="topLine section" id="topLine">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>topLine</h2>
-						</div>
-						<div class="row"></div>
-					</div>
-				</div>
-				<!-- end topLine-->
 			</header>
 			<!-- end header-->
 			<main>
