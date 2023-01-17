@@ -1,0 +1,30 @@
+mixin sPrize(data)
+	// start sPrize
+	+b.SECTION.sPrize.section#sPrize&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Призовой фонд
+			+e.amount 
+				span 1&nbsp;000&nbsp;000 руб
+				span 3&nbsp;призовых места в&nbsp;каждом кейсе
+			+e.row.row
+				.col
+					+e.item
+						+e.sum 85&nbsp;000 руб
+						+e.position--second
+							span 2 место
+							+icon('star-second')
+				.col
+					+e.item
+						+e.sum 100&nbsp;000 руб
+						+e.position--first
+							span 1 место
+							+icon('star-first')
+				.col
+					+e.item
+						+e.sum 65&nbsp;000 руб
+						+e.position--third
+							span 3 место
+							+icon('star-third')
+						
+	// end sPrize
