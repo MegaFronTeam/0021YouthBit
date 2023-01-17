@@ -543,3 +543,12 @@ iframe {
 		object-fit: cover;
 	}
 }
+
+.btn-success {
+	--bs-btn-hover-color: #{$white};
+	--bs-btn-hover-bg: #{$primary};
+	--bs-btn-hover-border-color: #{$primary};
+	--bs-btn-active-color: #{$white};
+	--bs-btn-active-bg: #{$primary};
+	--bs-btn-active-border-color: #{$primary};
+}
