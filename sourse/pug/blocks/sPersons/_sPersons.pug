@@ -2,8 +2,38 @@ mixin sPersons(data)
 	// start sPersons
 	+b.SECTION.sPersons.section#sPersons&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sPersons
-				
-			+e.row.row
+			+b.section-title
+				h2 Эксперты и Жюри
+			mixin slide(t,p)
+				+e.slide.swiper-slide
+					+e.item
+						+e.img-wrap
+							+img("img/avatar.png")
+						+e.name= t
+						+e.text= p
+			mixin control()
+				.row
+					.col
+						.swiper-pagination
+					.col-auto
+						+arrow 
+			+e.title Эксперты
+			+e.slider--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 2; x++)
+						+slide('Виктор Сожможнов','Следует отметить, что высококачественный прототип будущего проекта способствует')
+						+slide('Виктория Складчинкова','Прототип будущего проекта способствует')
+						+slide('Ким Самаджокис','Следует отметить')
+						+slide('Николай Ионов','Следует отметить, что высококачественный ')
+				+control()
+
+			+e.title Жюри
+			+e.slider--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 2; x++)
+						+slide('Виктор Сожможнов','Следует отметить, что высококачественный прототип будущего проекта способствует')
+						+slide('Виктория Складчинкова','Прототип будущего проекта способствует')
+						+slide('Ким Самаджокис','Следует отметить')
+						+slide('Николай Ионов','Следует отметить, что высококачественный ')
+				+control()
 	// end sPersons

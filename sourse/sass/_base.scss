@@ -334,7 +334,10 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(20);
+		fill: none;
+		stroke-width: 3px;
+		stroke: currentColor;
 	}
 
 	&::after {
@@ -355,20 +358,20 @@ ul {
 
 	&-bullet {
 		opacity: 1;
-		width: 8px;
-		height: 8px;
+		width: rem(16) !important;
+		height: rem(16) !important;
 		border-radius: 50%;
 		background-color: #E6E6E6;
 		outline: none !important;
 		@include mt;
-		margin-left: rem(8);
+		margin-left: rem(0) !important;
 		// padding-right: rem(8);
-		margin-right: rem(5);
+		margin-right: rem(16) !important;
 		display: inline-block;
 
 		&-active,
 		&:hover {
-			background-color: var(--bs-primary) ;
+			background-color: var(--bs-success) ;
 		}
 	}
 }

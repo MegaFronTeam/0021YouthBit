@@ -12,10 +12,11 @@ include components/btn.pug
 include components/ddgroup.pug
 
 mixin arrow()
-	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
-	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+	.arrow-wrap
+		.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+			+icon('arrow-left')
+		.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+			+icon('arrow-right')
 //- /arrow for swiper-slider
 
 mixin ie11()

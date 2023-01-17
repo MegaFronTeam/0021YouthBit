@@ -19,9 +19,9 @@
 
 
 	--fancybox-content-color: var(--bs-body-color);
-		--swiperArrowSize: #{rem(68)};
+		--swiperArrowSize: #{rem(16)};
 		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
-		--swiperBorderColorDef: var(--bs-primary);
+		--swiperBorderColorDef: transparent;
 		--swiperColorDef: var(--bs-primary);
 		--swiperBgDef: #ffffff;
 	
