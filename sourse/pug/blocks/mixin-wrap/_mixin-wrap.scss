@@ -9,14 +9,26 @@
 		@include mt;
 		display: grid;
 		place-items: center;
+		width: rem(39);
+		height: rem(39);
+		border-radius: 50%;
+		color: $white;
+		background-color: $primary;
+		border: 1px solid transparent;
 		&:hover{
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
+			color: $primary;
+			background-color: $white;
+			border-color: $primary;
 		}
 		
 	}
 	.icon{
-		font-size: rem(30);
+		font-size: rem(20);
+		&-telegram {
+			margin-right: 3px;
+		}
 	}
 
 

@@ -117,7 +117,7 @@
 		top: 0;
 		// left: 0;
 		right: 0;
-		background-color: $body-bg;
+		background-color: $light;
 		&:not(.active) {
 			transform: translate3d(120%, 0, 0);
 			--opacity: 0;
