@@ -3,26 +3,108 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
-
 	}
-	.section-title{
-		
+	.section-title {
 	}
-	&__col{
-
+	&__col {
 	}
-	&__item{
-
+	&__item {
+	}
+	.tabs {
+		max-width: rem(1181);
+		&__caption {
+			@include roww(16px, m);
+			display: flex;
+		}
+		&__btn {
+			@extend .btn, .btn-outline-primary;
+			--bs-btn-hover-color: #{$white};
+			--bs-btn-active-color: #{$white};
+			--bs-btn-bg: #{$light};
+			--bs-btn-padding-x: #{rem(24)};
+			--bs-btn-padding-y: #{rem(14)};
+			margin-bottom: rem(27);
+			@include media-breakpoint-up(xxl) {
+				--bs-btn-font-size: #{rem(18)};
+			}
+		}
+		&__content {
+			color: $white;
+			background-color: $primary;
+			border-radius: $border-radius-lg;
+			padding: rem(32);
+			h4 {
+				color: $white;
+				margin-bottom: rem(24);
+			}
+			.small {
+				display: block;
+				// font-size: rem(15);
+				font-weight: 700;
+				margin-bottom: rem(24);
+				font-variation-settings: "opsz" 8, "GRAD" 0, "slnt" 0, "XTRA" 497, "XOPQ" 96, "YOPQ" 91, "YTLC" 433, "YTUC" 649,
+					"YTAS" 750, "YTDE" -177, "YTFI" 738;
+			}
+			p {
+				font-weight: 200;
+				font-size: rem(15);
+				font-variation-settings: "opsz" 8, "GRAD" 0, "slnt" 0, "XTRA" 497, "XOPQ" 96, "YOPQ" 91, "YTLC" 433, "YTUC" 649,
+					"YTAS" 750, "YTDE" -177, "YTFI" 738;
+				margin-bottom: 1em;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__row {
+			align-items: center;
+			--bs-gutter-y: var(--bs-gutter-x);
+			@include media-breakpoint-up(xl) {
+				--bs-gutter-x: #{rem(42)};
+			}
+		}
+		&__content-wrap {
+			margin-bottom: rem(27);
+		}
+		&__content-btn {
+			@extend .btn, .btn-success;
+		}
+		&__content-link {
+			@include roww(16px, m);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			color: $white;
+			&:hover {
+				color: $link-hover-color;
+			}
+			.icon {
+				font-size: rem(24);
+			}
+			span {
+				display: block;
+				font-weight: 471;
+				font-size: rem(15);
+				line-height: calc(18 / 15);
+			}
+		}
 	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sCases

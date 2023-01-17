@@ -2,22 +2,44 @@ mixin sCases(data)
 	// start sCases
 	+b.SECTION.sCases.section#sCases&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCases
+			+b.section-title
+				h2 Кейсы
 			.tabs
 				.tabs__caption
-					.tabs__btn.active
-						span Дашборд регионов
 					.tabs__btn
+						span Дашборд регионов
+					.tabs__btn.active
 						span Цифровой помощник
 					.tabs__btn
 						span Росмолодёжь-Digital
 					.tabs__btn
 						span Объединяя молодёжь
+					
+				.tabs__content
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dignissimos possimus alias eaque ducimus impedit sint recusandae ad repellat, dolorem odit ipsam ullam ea. Autem odit quidem iste quam assumenda?
 				.tabs__content.active
-					
+					.tabs__content-wrap
+						h4 Цифровой помощник
+						.small Создай онлайн-помощника по&nbsp;заполнению грантовой заявки для молодёжи России
+						p Не&nbsp;следует, однако, забывать, что современная методология разработки позволяет выполнить важные задания по&nbsp;разработке модели развития. Равным образом, экономическая повестка сегодняшнего дня играет важную роль в&nbsp;формировании форм воздействия. Для современного мира убеждённость некоторых оппонентов требует определения и&nbsp;уточнения приоретизации разума над эмоциями. Следует отметить, что высококачественный прототип будущего проекта способствует подготовке и&nbsp;реализации переосмысления внешнеэкономических политик. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также реплицированные с&nbsp;зарубежных источников, современные исследования будут указаны как претенденты на&nbsp;роль ключевых факторов.
+					.tabs__row.row
+						.col-auto
+							a(href="#").tabs__content-link
+								+icon('sCases-video')
+								span Видеоинтервью
+						.col-auto
+							a(href="#").tabs__content-link
+								+icon('sCases-project')
+								span Презентация кейса
+						.col-auto
+							a(href="#").tabs__content-link
+								+icon('sContact-win')
+								span Победители и&nbsp;призеры
+						.col-xl.order-xl-first
+							.tabs__content-btn(href="#") Хочу решить кейс!
+
 				.tabs__content
-					
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dignissimos possimus alias eaque ducimus impedit sint recusandae ad repellat?
 				.tabs__content
-					
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dignissimos possimus alias eaque ducimus!
 	// end sCases
