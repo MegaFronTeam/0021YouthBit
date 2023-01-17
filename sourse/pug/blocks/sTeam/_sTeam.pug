@@ -2,8 +2,16 @@ mixin sTeam(data)
 	// start sTeam
 	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sTeam
-				
-			+e.row.row
+			+e.text-wrap.text-wrap
+				h2 Участники хакатона
+				+e.img-wrap
+					+e.text Хотят научиться новому и&nbsp;реализовать свой потенциал
+					+e.text Готовы принимать технологические вызовы и&nbsp;предлагать актуальные цифровые инструменты
+					+e.text Знают, как можно улучшить государственные платформы и&nbsp;сервисы для молодёжи
+					+pic("team-img.png")
+				ul
+					li молодёжь из любой точки России
+					li от 18 до 35 лет
+					li специалисты по IT и дизайну, студенты вузов
+				+e.btn(href="#").btn.btn-success Это про меня!
 	// end sTeam

@@ -31,7 +31,12 @@
 			height: auto;
 		}
 	}
-
+	&__btn{
+		@include media-breakpoint-down(xxl) {
+			--bs-btn-padding-x: .5rem;
+			--bs-btn-font-size: 0.7888888889rem;
+		}
+	}
 	@include media-breakpoint-up(md) {
 	}
 
