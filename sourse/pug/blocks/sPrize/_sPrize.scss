@@ -2,7 +2,13 @@
 .sPrize {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(40)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(60)};
+	}
+	@include media-breakpoint-up(xl) {
+		--sTPB: #{rem(80)};
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(8)};
@@ -22,15 +28,51 @@
 		align-items: center;
 	}
 	&__amount {
+		position: relative;
 		display: flex;
 		flex-direction: column;
+		padding-right: rem(50);
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(lg) {
+			padding-right: 0;
+			margin-bottom: rem(60);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			@include a-cent(y);
+			width: rem(28);
+			height: rem(28);
+			right: rem(14);
+			border-radius: 50%;
+			background-color: $success;
+			@include media-breakpoint-up(lg) {
+				content: none;
+			}
+		}
 		b {
 			font-weight: 471;
-			@include rfs(80px, font-size);
+			margin-bottom: rem(13);
+			@include rfs(75px, font-size);
+			color: $primary;
 			// font-size: rem(100);
 			line-height: calc(117 / 100);
 			@include media-breakpoint-up(xl) {
 				font-size: rem(100);
+			}
+			@include media-breakpoint-down(sm) {
+			}
+			@media (max-width: 450px) {
+				font-size: rem(36);
+				line-height: calc(42 / 36);
+			}
+		}
+		span {
+			font-size: rem(20);
+			line-height: calc(23 / 20);
+			@include media-breakpoint-up(xl) {
+				font-size: rem(24);
+				line-height: calc(28 / 24);
 			}
 		}
 	}
@@ -49,7 +91,6 @@
 		}
 	}
 	&__position {
-		@include roww(14px, m);
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -79,16 +120,42 @@
 		}
 	}
 	&__position--first {
-		border-width: rem(10);
+		position: relative;
+		--bWidth: #{rem(10)};
+		border-width: var(--bWidth);
 		padding: rem(10) rem(20);
 		@include media-breakpoint-up(lg) {
-			border-width: rem(12);
+			--bWidth: #{rem(12)};
 			padding: rem(21) rem(30) rem(21) rem(35);
 		}
 		@include media-breakpoint-up(xl) {
-			border-width: rem(14);
-			padding: rem(25) rem(41) rem(25) rem(53);
+			--bWidth: #{rem(14)};
+			padding: rem(25) rem(22) rem(25) rem(39);
 		}
+		&::before,
+		&::after {
+			@include media-breakpoint-up(lg) {
+				content: "";
+				position: absolute;
+				border-radius: rem(450);
+				border: 1px solid $success;
+				opacity: 0.3;
+				z-index: -1;
+			}
+		}
+		&::before {
+			width: calc(100% + #{rem(22)} + var(--bWidth) * 2);
+			height: calc(100% + #{rem(16)} + var(--bWidth)  * 2);
+			left: calc(#{rem(-11)} - var(--bWidth));
+			top: calc(#{rem(-8)} - var(--bWidth));
+		}
+		&::after {
+			width: calc(100% + #{rem(46)} + var(--bWidth) * 2);
+			height: calc(100% + #{rem(40)} + var(--bWidth) * 2);
+			left: calc(#{rem(-23)} - var(--bWidth));
+			top: calc(#{rem(-20)} - var(--bWidth));
+		}
+
 		.icon {
 			font-size: rem(78);
 			@include media-breakpoint-up(xl) {
@@ -101,12 +168,13 @@
 		padding: rem(16) rem(26);
 		@include media-breakpoint-up(lg) {
 			border-width: rem(8);
-			padding: rem(10) rem(18) rem(10) rem(28);
+			padding: rem(10) rem(16) rem(10) rem(28);
 		}
 		@include media-breakpoint-up(xl) {
 			border-width: rem(10);
-			padding: rem(12) rem(22) rem(12) rem(34);
+			padding: rem(12) rem(18) rem(12) rem(34);
 		}
+
 		.icon {
 			font-size: rem(52);
 			@include media-breakpoint-up(xl) {
@@ -119,10 +187,10 @@
 		padding: rem(19) rem(29);
 		@include media-breakpoint-up(lg) {
 			border-width: rem(3);
-			padding: rem(6) rem(10) rem(6) rem(23);
+			padding: rem(6) rem(8) rem(6) rem(23);
 		}
 		@include media-breakpoint-up(xl) {
-			padding: rem(8) rem(13) rem(9) rem(28);
+			padding: rem(8) rem(10) rem(9) rem(28);
 		}
 		.icon {
 			font-size: rem(32);
