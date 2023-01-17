@@ -1,8 +1,13 @@
 // start .sContact
 .sContact {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: 0;
+	--sPB: #{rem(24)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPT: 0;
+		--sPB: #{rem(32)};
+	}
+	
 	.soc {
 		margin-top: rem(26);
 		margin-bottom: rem(18);
