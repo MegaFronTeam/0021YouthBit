@@ -2,10 +2,17 @@
 .sAbout {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
+	@include media-breakpoint-down(lg){
+		--sPT: #{rem(30)};
+		
+	}
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
+		@include media-breakpoint-up(xl){
+			align-items: center;
+		}
 
 	}
 	.section-title{
@@ -16,6 +23,102 @@
 	}
 	&__item{
 
+		font-size: rem(24);
+	}
+	&__number{
+		font-size: rem(144);
+		font-weight: 471;
+		line-height: .8;
+	}
+	&__number-text{
+		&--sm{
+			font-size: rem(20);
+		}
+	}
+	&__text-wrap{
+		max-width: rem(505);
+	}
+	.col-md-auto{
+		@include media-breakpoint-down(md) {
+				text-align: center;
+		}
+	}
+	&__item--left{
+		position: relative;
+		z-index: 2;
+		padding-right: 40px;
+		text-align: left;
+		@include media-breakpoint-down(md) {
+			// display: flex;
+			// justify-content: center;
+			// margin-left: auto;
+			// margin-right: auto;
+			display: inline-block;
+		}
+		@include media-breakpoint-up(xl) {
+			margin-right: 30px;
+			margin-bottom: 0;
+		}
+		margin-bottom: 1em;
+		&::before{
+			content: '';
+			z-index: -1;
+			position: absolute;
+			right: 0;
+			bottom: 1em;
+			background-color: $primary;
+			width: rem(102);
+			height: rem(102);
+			border-radius: 50%;
+		}
+		.sAbout__number-text{
+			margin-left: 2em;
+		}
+	}
+
+	&__item--right{
+		text-align: right;
+		position: relative;
+		z-index: 2;
+		padding-right: rem(23);
+		padding-top: 23px;
+		padding-bottom: 23px;
+		@include media-breakpoint-up(xl){
+			margin-top: 0;
+		}
+		@include media-breakpoint-up(sm){
+
+			margin-top: 40px;
+		} 
+		// margin-top: 20px;
+		@include media-breakpoint-up(xl){
+		}
+
+		&::before{
+			content: '';
+			left: 2.2em;
+			top: 0;
+			background: #B3E427;
+			opacity: 0.3;
+			border-radius: 450px;
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+		}
+		&::after{
+			content: url(../img/@2x/about-img.png);
+			left: 70%;
+			position: absolute;
+			bottom: -5%;
+		}
+		.sAbout__number-text{
+			margin-right: 1em;
+		}
+	}
+	p{
+		font-size: rem(23);
+		font-weight: 471;
 	}
 
 	@include media-breakpoint-up(xl) {}

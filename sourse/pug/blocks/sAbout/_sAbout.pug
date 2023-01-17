@@ -1,9 +1,24 @@
 mixin sAbout(data)
 	// start sAbout
-	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+	+b.sAbout.section#sAbout&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sAbout
-				
 			+e.row.row
+				.col-md-auto
+					+e.item--left
+						div
+							+e.number 48
+							+e.number-text часов <br> кодинга
+				+e.text-wrap.text-wrap.col-md
+					
+						p Молодёжный бит&nbsp;&mdash;  твоя возможность
+						ul
+							li поработать над реальными кейсами и&nbsp;побороться за&nbsp;призовой фонд
+							li прокачать IT-навыки и&nbsp;посоревноваться с&nbsp;опытными участниками
+							li собрать яркую команду и&nbsp;запустить собственный проект
+							li получить поддержку топовых экспертов <br> IT-индустрии
+				.col-auto
+					+e.item--right
+						+e.number-text Команда
+						+e.number 3-5
+						+e.number-text--sm человек
 	// end sAbout
