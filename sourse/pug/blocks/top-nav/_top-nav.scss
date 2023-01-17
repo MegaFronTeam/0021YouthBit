@@ -6,7 +6,7 @@
 	padding-bottom: rem(6);
 	&__row {
 		--bs-gutter-x: #{rem(24)};
-		// --bs-gutter-y: var(--bs-gutter-x);
+		--bs-gutter-y: var(--bs-gutter-x);
 		justify-content: space-between;
 		@include media-breakpoint-up(xl) {
 			align-items: center;
