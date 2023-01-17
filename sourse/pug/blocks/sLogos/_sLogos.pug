@@ -2,8 +2,38 @@ mixin sLogos(data)
 	// start sLogos
 	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sLogos
+			+b.section-title
+				h2 Организаторы и партнёры
 				
-			+e.row.row
+			+e.title-sub  Организаторы
+			mixin control()
+				.row
+					.col
+						.swiper-pagination
+					.col-auto
+						+arrow 
+			+e.slider-wrap
+				+e.slider--js.swiper-slider
+
+					.swiper-wrapper
+						- for (var x = 0; x < 10; x++)
+							+e.slide.swiper-slide
+								+e.item
+									+e.img-wrap 
+										.img-wrap-center
+											+img("img/svg/logo-1.svg")
+									+e.title Федеральное агентство по делам молодёжи
+					+control()
+			+e.title-sub  Партнеры
+			+e.slider-wrap
+				+e.slider--js.swiper-slider
+					.swiper-wrapper
+						- for (var x = 0; x < 10; x++)
+							+e.slide.swiper-slide
+								+e.item
+									+e.img-wrap 
+										.img-wrap-center
+											+img("img/svg/logo-1.svg")
+									+e.title Федеральное агентство по делам молодёжи
+					+control()
 	// end sLogos

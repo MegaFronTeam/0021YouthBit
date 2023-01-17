@@ -331,6 +331,24 @@ function eventHandler() {
 			// }
 		},
 	});
+	
+	const swipersLogos = new Swiper('.sLogos__slider--js', {
+		slidesPerView: 'auto', 
+		watchOverflow: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+	});
+
 
 };
 if (document.readyState !== 'loading') {
