@@ -5,26 +5,29 @@ mixin sPrize(data)
 			+b.section-title
 				h2 Призовой фонд
 			+e.amount 
-				span 1&nbsp;000&nbsp;000 руб
+				b 1&nbsp;000&nbsp;000 руб
 				span 3&nbsp;призовых места в&nbsp;каждом кейсе
 			+e.row.row
-				.col
+				.col-lg-4
 					+e.item
-						+e.sum 85&nbsp;000 руб
-						+e.position--second
-							span 2 место
-							+icon('star-second')
-				.col
-					+e.item
-						+e.sum 100&nbsp;000 руб
+						+e.sum.d-none.d-lg-block 100&nbsp;000 руб
 						+e.position--first
 							span 1 место
 							+icon('star-first')
-				.col
+							+e.sum.d-lg-none 100&nbsp;000 руб
+				.col-lg-4.order-lg-first
 					+e.item
-						+e.sum 65&nbsp;000 руб
+						+e.sum.d-none.d-lg-block 85&nbsp;000 руб
+						+e.position--second
+							span 2 место
+							+icon('star-second')
+							+e.sum.d-lg-none 85&nbsp;000 руб
+				.col-lg-4
+					+e.item
+						+e.sum.d-none.d-lg-block 65&nbsp;000 руб
 						+e.position--third
 							span 3 место
 							+icon('star-third')
-						
+							+e.sum.d-lg-none 65&nbsp;000 руб
+
 	// end sPrize
