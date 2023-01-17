@@ -23,6 +23,13 @@
 	}
 	&__logo {
 		display: block;
+		@include media-breakpoint-only(xl) {
+			max-width: rem(190);
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
 	}
 
 	@include media-breakpoint-up(md) {
