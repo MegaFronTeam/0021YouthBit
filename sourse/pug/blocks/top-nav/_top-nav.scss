@@ -11,6 +11,14 @@
 		@include media-breakpoint-up(xl) {
 			align-items: center;
 		}
+		@include media-breakpoint-only(xl) {
+			--bs-gutter-x: #{rem(16)};
+		}
+	}
+	.soc {
+		@include media-breakpoint-down(xl) {
+			padding: rem(12) rem(16);
+		}
 	}
 	.section-title {
 	}
@@ -31,9 +39,9 @@
 			height: auto;
 		}
 	}
-	&__btn{
+	&__btn {
 		@include media-breakpoint-down(xxl) {
-			--bs-btn-padding-x: .5rem;
+			--bs-btn-padding-x: 0.5rem;
 			--bs-btn-font-size: 0.7888888889rem;
 		}
 	}
