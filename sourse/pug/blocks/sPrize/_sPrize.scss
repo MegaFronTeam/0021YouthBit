@@ -3,11 +3,24 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	--sTPB: #{rem(40)};
+
 	@include media-breakpoint-up(md) {
 		--sTPB: #{rem(60)};
 	}
 	@include media-breakpoint-up(xl) {
 		--sTPB: #{rem(80)};
+	}
+	position: relative;
+	& > img {
+		position: absolute;
+		display: none;
+		max-width: 50%;
+		right: 0;
+		bottom: 30%;
+		z-index: -1;
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
 	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
@@ -145,7 +158,7 @@
 		}
 		&::before {
 			width: calc(100% + #{rem(22)} + var(--bWidth) * 2);
-			height: calc(100% + #{rem(16)} + var(--bWidth)  * 2);
+			height: calc(100% + #{rem(16)} + var(--bWidth) * 2);
 			left: calc(#{rem(-11)} - var(--bWidth));
 			top: calc(#{rem(-8)} - var(--bWidth));
 		}

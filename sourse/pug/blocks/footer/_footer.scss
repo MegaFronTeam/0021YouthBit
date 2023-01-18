@@ -3,6 +3,18 @@
 	--sPT: 0;
 	--sPB: #{rem(18)};
 	// --sTPB: #{rem()};
+	position: relative;
+	& > img {
+		position: absolute;
+		display: none;
+		max-width: 50%;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+	}
 	@include media-breakpoint-up(md) {
 		--sPT: 0;
 		--sPB: #{rem(150)};

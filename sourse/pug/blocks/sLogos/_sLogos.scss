@@ -3,6 +3,19 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	position: relative;
+	& > img {
+		position: absolute;
+		display: none;
+		max-width: 50%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		transform: translateY(-43%);
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
