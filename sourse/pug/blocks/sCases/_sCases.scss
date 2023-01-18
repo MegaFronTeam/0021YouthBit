@@ -3,6 +3,10 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	--sTPB: #{rem(40)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(60)};
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -125,6 +129,7 @@
 			--bs-btn-hover-color: #{$white};
 			--bs-btn-active-color: #{$white};
 			--bs-btn-bg: #{$light};
+			--bs-btn-border-color: transparent;
 			padding: rem(16);
 			padding-right: rem(72);
 			margin-bottom: rem(27);
