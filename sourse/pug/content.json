@@ -1,11 +1,11 @@
 {
 	"nav":[
-		{"name":"О хакатоне", "url":"#"},
-		{"name":"Для кого", "url":"#"},
-		{"name":"Кейсы", "url":"#"},
-		{"name":"Эксперты", "url":"#"},
-		{"name":"Организаторы", "url":"#"},
-		{"name":"Контакты", "url":"#"},
+		{"name":"О хакатоне", "url":"#sAbout"},
+		{"name":"Для кого", "url":"#sTeam"},
+		{"name":"Кейсы", "url":"#sCases"},
+		{"name":"Эксперты", "url":"#sPersons"},
+		{"name":"Организаторы", "url":"#sLogos"},
+		{"name":"Контакты", "url":"#sContact"},
 		{"name":"FAQ", "url":"#"}
 	],
 	"social":[
