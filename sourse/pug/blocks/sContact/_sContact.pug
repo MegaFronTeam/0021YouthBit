@@ -6,19 +6,47 @@ mixin sContact()
 				+e.row.row
 					.col-sm-auto
 						h2 Контакты
-					.col-12.order-md-last
-						h4 Для участников
+					.col-12
 						+e.row-sm.row
 							.col-sm-auto
+								h4 Для участников
 								+e.item
 									small Адрес электронной почты
 									a(href="email:example@mail.com") example@mail.com
 							.col-sm-auto
-								+e.item
-									small Телефон горячей линии
-									a(href="tel:05555555555") 0 555 555 55 55
-							.col-md
-								+soc()
-					.col-sm-auto.order-sm-2
-						+icon('sContact-logo')
+								+b.social
+									+e.link(href= "#" target="_blank")
+										+e.icon
+											+icon('telegram')
+										span Telegram-канал хакатона
+									+e.link(href= "#" target="_blank")
+										+e.icon
+											+icon('telegram')
+										span Чат по&nbsp;поиску команды
+							.col-lg.text-lg-end
+								+icon('sContact-logo')
 	// end sContact
+//- mixin sContact()
+//- 	// start sContact
+//- 	+b.SECTION.sContact.section#sContact&attributes(attributes)
+//- 		.container
+//- 			+e.wrapper
+//- 				+e.row.row
+//- 					.col-sm-auto
+//- 						h2 Контакты
+//- 					.col-12.order-md-last
+//- 						h4 Для участников
+//- 						+e.row-sm.row
+//- 							.col-sm-auto
+//- 								+e.item
+//- 									small Адрес электронной почты
+//- 									a(href="email:example@mail.com") example@mail.com
+//- 							.col-sm-auto
+//- 								+e.item
+//- 									small Телефон горячей линии
+//- 									a(href="tel:05555555555") 0 555 555 55 55
+//- 							.col-md
+//- 								+soc()
+//- 					.col-sm-auto.order-sm-2
+//- 						+icon('sContact-logo')
+//- 	// end sContact

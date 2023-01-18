@@ -7,28 +7,81 @@
 		--sPT: 0;
 		--sPB: #{rem(32)};
 	}
-	
-	.soc {
-		margin-top: rem(26);
-		margin-bottom: rem(18);
-		@include media-breakpoint-up(md) {
-			margin-top: 0;;
-			margin-bottom: 0;
-			justify-content: flex-end;
-		}
-		&__item {
-			@include media-breakpoint-down(sm) {
-				width: rem(25);
-				height: rem(25);
+
+	// .soc {
+	// 	margin-top: rem(26);
+	// 	margin-bottom: rem(18);
+	// 	@include media-breakpoint-up(md) {
+	// 		margin-top: 0;
+	// 		margin-bottom: 0;
+	// 		justify-content: flex-end;
+	// 	}
+	// 	&__item {
+	// 		@include media-breakpoint-down(sm) {
+	// 			width: rem(25);
+	// 			height: rem(25);
+	// 		}
+	// 	}
+	// 	.icon {
+	// 		@include media-breakpoint-down(sm) {
+	// 			font-size: rem(13);
+	// 		}
+	// 		&-telegram {
+	// 			@include media-breakpoint-down(sm) {
+	// 				margin-right: 1.5px;
+	// 			}
+	// 		}
+	// 	}
+	// }
+	.social {
+		&__link {
+			@include roww(18px, m);
+			display: flex;
+			align-items: center;
+			margin-bottom: rem(10);
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:hover {
+				.social__icon {
+					background-color: $link-hover-color;
+					border-color: $link-hover-color;
+				}
+			}
+			span {
+				display: block;
+				font-weight: 200;
+				font-size: rem(16);
+				color: $body-color;
+				font-variation-settings: "opsz" 8, "GRAD" 0, "slnt" 0, "XTRA" 497, "XOPQ" 96, "YOPQ" 91, "YTLC" 433, "YTUC" 649,
+					"YTAS" 750, "YTDE" -177, "YTFI" 738;
 			}
 		}
-		.icon {
+		&__icon {
+			@include mt;
+			display: grid;
+			place-items: center;
+			width: rem(39);
+			height: rem(39);
+			border-radius: 50%;
+			color: $white;
+			background-color: $primary;
+			border: 1px solid transparent;
+			flex-shrink: 0;
 			@include media-breakpoint-down(sm) {
-				font-size: rem(13);
+				width: rem(26);
+				height: rem(26);
 			}
-			&-telegram {
+			.icon {
+				font-size: rem(20);
 				@include media-breakpoint-down(sm) {
-					margin-right: 1.5px;
+					font-size: rem(13);
+				}
+				&-telegram {
+					margin-right: 3px;
+					@include media-breakpoint-down(sm) {
+						margin-right: 1.5px;
+					}
 				}
 			}
 		}
@@ -39,12 +92,14 @@
 		align-items: center;
 		justify-content: space-between;
 		@include media-breakpoint-up(xl) {
-
 		}
 	}
 	&__row-sm {
-		--bs-gutter-y: #{rem(16)};
-		// align-items: center;
+		--bs-gutter-y: #{rem(45)};
+		align-items: flex-end;
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(46)};
+		}
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: #{rem(60)};
 		}
@@ -72,6 +127,12 @@
 		.icon-sContact-logo {
 			font-size: rem(22);
 			color: $primary;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(30);
+			}
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(5);
+			}
 		}
 	}
 	&__item {
@@ -82,7 +143,8 @@
 			font-weight: 200;
 			margin-bottom: 4px;
 			font-size: rem(13);
-			font-variation-settings: 'wdth' 100, 'opsz' 8, 'GRAD' 0, 'slnt' 0, 'XTRA' 497, 'XOPQ' 96, 'YOPQ' 91, 'YTLC' 433, 'YTUC' 649, 'YTAS' 750, 'YTDE' -177, 'YTFI' 738;
+			font-variation-settings: "wdth" 100, "opsz" 8, "GRAD" 0, "slnt" 0, "XTRA" 497, "XOPQ" 96, "YOPQ" 91, "YTLC" 433,
+				"YTUC" 649, "YTAS" 750, "YTDE" -177, "YTFI" 738;
 			@include media-breakpoint-up(sm) {
 				font-size: rem(15);
 			}
