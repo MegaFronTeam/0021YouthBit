@@ -354,7 +354,7 @@ function eventHandler() {
 		const caseSlider = new Swiper(caseManager.querySelector('.case-slider--js'), {
 			slidesPerView: 'auto',
 			watchOverflow: true,
-			spacebetween: 16,
+			spaceBetween: 16,
 			pagination: {
 				el: ' .swiper-pagination',
 				type: 'bullets',
