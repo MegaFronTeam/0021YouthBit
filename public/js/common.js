@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -23,8 +23,8 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -33,7 +33,7 @@ const JSCCommon = {
 		});
 		document.addEventListener('click', (event) => {
 			let element = event.target.closest(link)
-			if(!element) return;
+			if (!element) return;
 			let modal = document.querySelector("#" + element.dataset.src);
 			const data = element.dataset;
 
@@ -75,7 +75,7 @@ const JSCCommon = {
 			[document.body].forEach(el => el.classList.remove("fixed"));
 		}
 		for (let menuItem of menuItems) {
-			menuItem.addEventListener('click', function() {
+			menuItem.addEventListener('click', function () {
 				document.body.classList.remove('fixed');
 				menu.classList.remove('active');
 				toggle.forEach(element => element.classList.remove("on"));
@@ -156,7 +156,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	sendForm() {
@@ -281,32 +281,32 @@ const JSCCommon = {
 		}
 	},
 	imgToSVG() {
-    const convertImages = (query, callback) => {
+		const convertImages = (query, callback) => {
 			const images = document.querySelectorAll(query);
-	
+
 			images.forEach(image => {
 				fetch(image.src)
 					.then(res => res.text())
 					.then(data => {
 						const parser = new DOMParser();
 						const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
-	
+
 						if (image.id) svg.id = image.id;
 						if (image.className) svg.classList = image.classList;
-	
+
 						image.parentNode.replaceChild(svg, image);
 					})
 					.then(callback)
 					.catch(error => console.error(error))
 			});
 		};
-	
+
 		convertImages('.img-svg-js');
-  },
+	},
 };
 const $ = jQuery;
 
-function eventHandler() { 
+function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs');
 	JSCCommon.mobileMenu();
@@ -316,7 +316,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 
 	const swipersPersons = new Swiper('.sPersons__slider--js', {
-		slidesPerView: 'auto', 
+		slidesPerView: 'auto',
 		watchOverflow: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -331,9 +331,9 @@ function eventHandler() {
 			// }
 		},
 	});
-	
+
 	const swipersLogos = new Swiper('.sLogos__slider--js', {
-		slidesPerView: 'auto', 
+		slidesPerView: 'auto',
 		watchOverflow: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -348,6 +348,30 @@ function eventHandler() {
 			// }
 		},
 	});
+
+	const caseManagers = document.querySelectorAll('.tabs__case-manager');
+	for (const caseManager of caseManagers) {
+		const caseSlider = new Swiper(caseManager.querySelector('.case-slider--js'), {
+			slidesPerView: 'auto',
+			watchOverflow: true,
+			spacebetween: 16,
+			pagination: {
+				el: ' .swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				// renderBullet: function (index, className) {
+				// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+				// }
+			},
+		});
+		const caseBtn = caseManager.querySelector('.tabs__case-manager-btn');
+		caseBtn.addEventListener('click', function (e) {
+			$(this).toggleClass('active');
+			$(this).siblings('.tabs__case-manager-body').toggleClass('active');
+			// e.preventDefault();
+		});
+	};
+
 
 
 };

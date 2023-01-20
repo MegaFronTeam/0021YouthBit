@@ -6,94 +6,283 @@ mixin sCases(data)
 				h2 Кейсы
 			.tabs
 				.tabs__caption
-					.tabs__btn
-						span Дашборд регионов
 					.tabs__btn.active
+						span Дашборд регионов
+					.tabs__btn
 						span Цифровой помощник
 					.tabs__btn
 						span Росмолодёжь-Digital
 					.tabs__btn
 						span Объединяя молодёжь
 				.tabs__wrap
-					.tabs__content
+					.tabs__content.active
 						.tabs__content-wrap
 							h4 Дашборд регионов
 							.small Создай онлайн-помощника по&nbsp;заполнению грантовой заявки для молодёжи России
+							.tabs__tags
+								.btn Mobile
+								.btn Web
+								.btn CV
 							p Не&nbsp;следует, однако, забывать, что современная методология разработки позволяет выполнить важные задания по&nbsp;разработке модели развития. Равным образом, экономическая повестка сегодняшнего дня играет важную роль в&nbsp;формировании форм воздействия. Для современного мира убеждённость некоторых оппонентов требует определения и&nbsp;уточнения приоретизации разума над эмоциями. Следует отметить, что высококачественный прототип будущего проекта способствует подготовке и&nbsp;реализации переосмысления внешнеэкономических политик. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также реплицированные с&nbsp;зарубежных источников, современные исследования будут указаны как претенденты на&nbsp;роль ключевых факторов.
-						.tabs__row.row
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sCases-video')
-									span Видеоинтервью
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sCases-project')
-									span Презентация кейса
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sContact-win')
-									span Победители и&nbsp;призеры
-							.col-xl.order-xl-first
-								a(href="#").tabs__content-btn Хочу решить кейс!
-					.tabs__content.active
+							a(href="#").tabs__content-btn Хочу решить кейс!
+						.tabs__case-manager
+							.tabs__case-manager-btn
+								h5 Постановщик кейса
+							.tabs__case-manager-body
+								+b.case-slider--js.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide
+											+e.item
+												+e.img-wrap
+													.img-wrap-center
+														+img(src="img/svg/cases-logo-1.svg")
+												+e.title Федеральное агентство по&nbsp;делам молодёжи
+										+e.slide.swiper-slide
+											+e.item
+												+e.img-wrap
+													.img-wrap-center
+														+img(src="img/svg/cases-logo-1.svg")
+												+e.title Федеральное агентство по&nbsp;делам молодёжи
+										+e.slide.swiper-slide
+											+e.item
+												+e.img-wrap
+													.img-wrap-center
+														+img(src="img/svg/cases-logo-1.svg")
+												+e.title Федеральное агентство по&nbsp;делам молодёжи
+									.swiper-pagination
+								.tabs__links
+									a(href="#").tabs__content-link
+										+icon('sCases-video')
+										span Видеоинтервью
+									a(href="#").tabs__content-link
+										+icon('sCases-project')
+										span Презентация кейса
+									a(href="#").tabs__content-link
+										+icon('sContact-win')
+										span Победители и&nbsp;призеры
+					.tabs__content
 						.tabs__content-wrap
 							h4 Цифровой помощник
 							.small Создай онлайн-помощника по&nbsp;заполнению грантовой заявки для молодёжи России
+							.tabs__tags
+								.btn Mobile
+								.btn Web
+								.btn CV
 							p Не&nbsp;следует, однако, забывать, что современная методология разработки позволяет выполнить важные задания по&nbsp;разработке модели развития. Равным образом, экономическая повестка сегодняшнего дня играет важную роль в&nbsp;формировании форм воздействия. Для современного мира убеждённость некоторых оппонентов требует определения и&nbsp;уточнения приоретизации разума над эмоциями. Следует отметить, что высококачественный прототип будущего проекта способствует подготовке и&nbsp;реализации переосмысления внешнеэкономических политик. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также реплицированные с&nbsp;зарубежных источников, современные исследования будут указаны как претенденты на&nbsp;роль ключевых факторов.
-						.tabs__row.row
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sCases-video')
-									span Видеоинтервью
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sCases-project')
-									span Презентация кейса
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sContact-win')
-									span Победители и&nbsp;призеры
-							.col-xl.order-xl-first
-								a(href="#").tabs__content-btn Хочу решить кейс!
-
+							a(href="#").tabs__content-btn Хочу решить кейс!
+						.tabs__case-manager
+							.tabs__case-manager-btn
+								h5 Постановщик кейса
+							.tabs__case-manager-body
+								+b.case-slider--js.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide
+											+e.item
+												+e.img-wrap
+													.img-wrap-center
+														+img(src="img/svg/cases-logo-1.svg")
+												+e.title Федеральное агентство по&nbsp;делам молодёжи
+										
+									.swiper-pagination
+								.tabs__links
+									a(href="#").tabs__content-link
+										+icon('sCases-video')
+										span Видеоинтервью
+									a(href="#").tabs__content-link
+										+icon('sCases-project')
+										span Презентация кейса
+									a(href="#").tabs__content-link
+										+icon('sContact-win')
+										span Победители и&nbsp;призеры
 					.tabs__content
 						.tabs__content-wrap
 							h4 Росмолодёжь-Digital
 							.small Создай онлайн-помощника по&nbsp;заполнению грантовой заявки для молодёжи России
+							.tabs__tags
+								.btn Mobile
+								.btn Web
+								.btn CV
 							p Не&nbsp;следует, однако, забывать, что современная методология разработки позволяет выполнить важные задания по&nbsp;разработке модели развития. Равным образом, экономическая повестка сегодняшнего дня играет важную роль в&nbsp;формировании форм воздействия. Для современного мира убеждённость некоторых оппонентов требует определения и&nbsp;уточнения приоретизации разума над эмоциями. Следует отметить, что высококачественный прототип будущего проекта способствует подготовке и&nbsp;реализации переосмысления внешнеэкономических политик. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также реплицированные с&nbsp;зарубежных источников, современные исследования будут указаны как претенденты на&nbsp;роль ключевых факторов.
-						.tabs__row.row
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sCases-video')
-									span Видеоинтервью
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sCases-project')
-									span Презентация кейса
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sContact-win')
-									span Победители и&nbsp;призеры
-							.col-xl.order-xl-first
-								a(href="#").tabs__content-btn Хочу решить кейс!
+							a(href="#").tabs__content-btn Хочу решить кейс!
+						.tabs__case-manager
+							.tabs__case-manager-btn
+								h5 Постановщик кейса
+							.tabs__case-manager-body
+								+b.case-slider--js.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide
+											+e.item
+												+e.img-wrap
+													.img-wrap-center
+														+img(src="img/svg/cases-logo-1.svg")
+												+e.title Федеральное агентство по&nbsp;делам молодёжи
+										+e.slide.swiper-slide
+											+e.item
+												+e.img-wrap
+													.img-wrap-center
+														+img(src="img/svg/cases-logo-1.svg")
+												+e.title Федеральное агентство по&nbsp;делам молодёжи
+										+e.slide.swiper-slide
+											+e.item
+												+e.img-wrap
+													.img-wrap-center
+														+img(src="img/svg/cases-logo-1.svg")
+												+e.title Федеральное агентство по&nbsp;делам молодёжи
+									.swiper-pagination
+								.tabs__links
+									a(href="#").tabs__content-link
+										+icon('sCases-video')
+										span Видеоинтервью
+									a(href="#").tabs__content-link
+										+icon('sCases-project')
+										span Презентация кейса
+									a(href="#").tabs__content-link
+										+icon('sContact-win')
+										span Победители и&nbsp;призеры
 					.tabs__content
 						.tabs__content-wrap
 							h4 Объединяя молодёжь
 							.small Создай онлайн-помощника по&nbsp;заполнению грантовой заявки для молодёжи России
+							.tabs__tags
+								.btn Mobile
+								.btn Web
+								.btn CV
 							p Не&nbsp;следует, однако, забывать, что современная методология разработки позволяет выполнить важные задания по&nbsp;разработке модели развития. Равным образом, экономическая повестка сегодняшнего дня играет важную роль в&nbsp;формировании форм воздействия. Для современного мира убеждённость некоторых оппонентов требует определения и&nbsp;уточнения приоретизации разума над эмоциями. Следует отметить, что высококачественный прототип будущего проекта способствует подготовке и&nbsp;реализации переосмысления внешнеэкономических политик. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также реплицированные с&nbsp;зарубежных источников, современные исследования будут указаны как претенденты на&nbsp;роль ключевых факторов.
-						.tabs__row.row
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sCases-video')
-									span Видеоинтервью
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sCases-project')
-									span Презентация кейса
-							.col-auto
-								a(href="#").tabs__content-link
-									+icon('sContact-win')
-									span Победители и&nbsp;призеры
-							.col-xl.order-xl-first
-								a(href="#").tabs__content-btn Хочу решить кейс!
+							a(href="#").tabs__content-btn Хочу решить кейс!
+						.tabs__case-manager
+							.tabs__case-manager-btn
+								h5 Постановщик кейса
+							.tabs__case-manager-body
+								+b.case-slider--js.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide
+											+e.item
+												+e.img-wrap
+													.img-wrap-center
+														+img(src="img/svg/cases-logo-1.svg")
+												+e.title Федеральное агентство по&nbsp;делам молодёжи
+										+e.slide.swiper-slide
+											+e.item
+												+e.img-wrap
+													.img-wrap-center
+														+img(src="img/svg/cases-logo-1.svg")
+												+e.title Федеральное агентство по&nbsp;делам молодёжи
+										+e.slide.swiper-slide
+											+e.item
+												+e.img-wrap
+													.img-wrap-center
+														+img(src="img/svg/cases-logo-1.svg")
+												+e.title Федеральное агентство по&nbsp;делам молодёжи
+									.swiper-pagination
+								.tabs__links
+									a(href="#").tabs__content-link
+										+icon('sCases-video')
+										span Видеоинтервью
+									a(href="#").tabs__content-link
+										+icon('sCases-project')
+										span Презентация кейса
+									a(href="#").tabs__content-link
+										+icon('sContact-win')
+										span Победители и&nbsp;призеры
+
 	// end sCases
+
+//- mixin sCases(data)
+//- 	// start sCases
+//- 	+b.SECTION.sCases.section#sCases&attributes(attributes)
+//- 		.container
+//- 			+b.section-title
+//- 				h2 Кейсы
+//- 			.tabs
+//- 				.tabs__caption
+//- 					.tabs__btn
+//- 						span Дашборд регионов
+//- 					.tabs__btn.active
+//- 						span Цифровой помощник
+//- 					.tabs__btn
+//- 						span Росмолодёжь-Digital
+//- 					.tabs__btn
+//- 						span Объединяя молодёжь
+//- 				.tabs__wrap
+//- 					.tabs__content
+//- 						.tabs__content-wrap
+//- 							h4 Дашборд регионов
+//- 							.small Создай онлайн-помощника по&nbsp;заполнению грантовой заявки для молодёжи России
+//- 							p Не&nbsp;следует, однако, забывать, что современная методология разработки позволяет выполнить важные задания по&nbsp;разработке модели развития. Равным образом, экономическая повестка сегодняшнего дня играет важную роль в&nbsp;формировании форм воздействия. Для современного мира убеждённость некоторых оппонентов требует определения и&nbsp;уточнения приоретизации разума над эмоциями. Следует отметить, что высококачественный прототип будущего проекта способствует подготовке и&nbsp;реализации переосмысления внешнеэкономических политик. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также реплицированные с&nbsp;зарубежных источников, современные исследования будут указаны как претенденты на&nbsp;роль ключевых факторов.
+//- 						.tabs__row.row
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sCases-video')
+//- 									span Видеоинтервью
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sCases-project')
+//- 									span Презентация кейса
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sContact-win')
+//- 									span Победители и&nbsp;призеры
+//- 							.col-xl.order-xl-first
+//- 								a(href="#").tabs__content-btn Хочу решить кейс!
+//- 					.tabs__content.active
+//- 						.tabs__content-wrap
+//- 							h4 Цифровой помощник
+//- 							.small Создай онлайн-помощника по&nbsp;заполнению грантовой заявки для молодёжи России
+//- 							p Не&nbsp;следует, однако, забывать, что современная методология разработки позволяет выполнить важные задания по&nbsp;разработке модели развития. Равным образом, экономическая повестка сегодняшнего дня играет важную роль в&nbsp;формировании форм воздействия. Для современного мира убеждённость некоторых оппонентов требует определения и&nbsp;уточнения приоретизации разума над эмоциями. Следует отметить, что высококачественный прототип будущего проекта способствует подготовке и&nbsp;реализации переосмысления внешнеэкономических политик. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также реплицированные с&nbsp;зарубежных источников, современные исследования будут указаны как претенденты на&nbsp;роль ключевых факторов.
+//- 						.tabs__row.row
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sCases-video')
+//- 									span Видеоинтервью
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sCases-project')
+//- 									span Презентация кейса
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sContact-win')
+//- 									span Победители и&nbsp;призеры
+//- 							.col-xl.order-xl-first
+//- 								a(href="#").tabs__content-btn Хочу решить кейс!
+
+//- 					.tabs__content
+//- 						.tabs__content-wrap
+//- 							h4 Росмолодёжь-Digital
+//- 							.small Создай онлайн-помощника по&nbsp;заполнению грантовой заявки для молодёжи России
+//- 							p Не&nbsp;следует, однако, забывать, что современная методология разработки позволяет выполнить важные задания по&nbsp;разработке модели развития. Равным образом, экономическая повестка сегодняшнего дня играет важную роль в&nbsp;формировании форм воздействия. Для современного мира убеждённость некоторых оппонентов требует определения и&nbsp;уточнения приоретизации разума над эмоциями. Следует отметить, что высококачественный прототип будущего проекта способствует подготовке и&nbsp;реализации переосмысления внешнеэкономических политик. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также реплицированные с&nbsp;зарубежных источников, современные исследования будут указаны как претенденты на&nbsp;роль ключевых факторов.
+//- 						.tabs__row.row
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sCases-video')
+//- 									span Видеоинтервью
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sCases-project')
+//- 									span Презентация кейса
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sContact-win')
+//- 									span Победители и&nbsp;призеры
+//- 							.col-xl.order-xl-first
+//- 								a(href="#").tabs__content-btn Хочу решить кейс!
+//- 					.tabs__content
+//- 						.tabs__content-wrap
+//- 							h4 Объединяя молодёжь
+//- 							.small Создай онлайн-помощника по&nbsp;заполнению грантовой заявки для молодёжи России
+//- 							p Не&nbsp;следует, однако, забывать, что современная методология разработки позволяет выполнить важные задания по&nbsp;разработке модели развития. Равным образом, экономическая повестка сегодняшнего дня играет важную роль в&nbsp;формировании форм воздействия. Для современного мира убеждённость некоторых оппонентов требует определения и&nbsp;уточнения приоретизации разума над эмоциями. Следует отметить, что высококачественный прототип будущего проекта способствует подготовке и&nbsp;реализации переосмысления внешнеэкономических политик. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также реплицированные с&nbsp;зарубежных источников, современные исследования будут указаны как претенденты на&nbsp;роль ключевых факторов.
+//- 						.tabs__row.row
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sCases-video')
+//- 									span Видеоинтервью
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sCases-project')
+//- 									span Презентация кейса
+//- 							.col-auto
+//- 								a(href="#").tabs__content-link
+//- 									+icon('sContact-win')
+//- 									span Победители и&nbsp;призеры
+//- 							.col-xl.order-xl-first
+//- 								a(href="#").tabs__content-btn Хочу решить кейс!
+//- 	// end sCases
