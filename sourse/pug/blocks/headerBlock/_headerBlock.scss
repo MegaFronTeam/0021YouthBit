@@ -146,6 +146,7 @@
 	}
 	ul {
 		margin-bottom: em(40);
+		font-weight: 200;
 	}
 	&__btn {
 		padding: em(12) em(22);
@@ -211,6 +212,8 @@
 		padding-left: em(16);
 		margin-bottom: em(16);
 		position: relative;
+		font-weight: 200;
+		font-variation-settings: 'opsz' 8, 'GRAD' 0, 'slnt' 0, 'XTRA' 497, 'XOPQ' 96, 'YOPQ' 91, 'YTLC' 433, 'YTUC' 649, 'YTAS' 750, 'YTDE' -177, 'YTFI' 738;
 		@include media-breakpoint-down(sm) {
 			font-size: 14px;
 		}
