@@ -6,7 +6,7 @@
 		{"name":"Эксперты", "url":"#sPersons"},
 		{"name":"Организаторы", "url":"#sLogos"},
 		{"name":"Контакты", "url":"#sContact"},
-		{"name":"FAQ", "url":"#"}
+		{"name":"FAQ", "url":"#sFAQ"}
 	],
 	"social":[
 		"telegram"

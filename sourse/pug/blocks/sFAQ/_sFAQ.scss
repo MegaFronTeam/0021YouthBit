@@ -53,7 +53,12 @@
 			justify-content: space-between;
 			align-items: center;
 			padding: rem(24) rem(10);
-
+			cursor: pointer;
+			&:hover {
+				h5 {
+					color: $primary;
+				}
+			}
 			h5 {
 				@include mt;
 				margin-bottom: 0;
