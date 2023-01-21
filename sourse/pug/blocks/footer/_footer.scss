@@ -1,7 +1,7 @@
 .footer {
 	margin-top: auto;
 	--sPT: 0;
-	--sPB: #{rem(18)};
+	--sPB: #{rem(24)};
 	// --sTPB: #{rem()};
 	position: relative;
 	& > img {
@@ -17,11 +17,11 @@
 	}
 	@include media-breakpoint-up(md) {
 		--sPT: 0;
-		--sPB: #{rem(150)};
+		--sPB: #{rem(45)};
 	}
 	@include media-breakpoint-up(xxl) {
 		--sPT: 0;
-		--sPB: #{rem(300)};
+		--sPB: #{rem(45)};
 	}
 	&__row {
 		--bs-gutter-y: calc(var(--bs-gutter-x) / 2);

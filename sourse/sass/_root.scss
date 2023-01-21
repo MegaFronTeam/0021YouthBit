@@ -6,7 +6,7 @@
 	@include media-breakpoint-up(md) {
 		
 		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
+		--sPB: #{rem(80)};
 		--sTPB: #{rem(40)};
 	}
 	@include media-breakpoint-up(xl) {
@@ -14,7 +14,7 @@
 	}
 
 	--sPT: #{rem(80 * .5)};
-	--sPB: #{rem(90 * .5)};
+	--sPB: #{rem(80 * .5)};
 	--sTPB: #{rem(40 * .5)};
 
 
