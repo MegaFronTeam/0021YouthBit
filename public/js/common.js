@@ -138,6 +138,7 @@ const JSCCommon = {
 						? (element.classList.add('active'), element.previousSibling.classList.add('active'))
 						: element.classList.remove('active')
 				});
+				JSCCommon.caseSlider();
 			})
 		})
 
@@ -303,6 +304,38 @@ const JSCCommon = {
 
 		convertImages('.img-svg-js');
 	},
+	caseSlider() {
+		const caseManagers = document.querySelectorAll('.tabs__case-manager');
+		for (const caseManager of caseManagers) {
+			const caseSlider = new Swiper(caseManager.querySelector('.case-slider--js'), {
+				slidesPerView: 'auto',
+				watchOverflow: true,
+				spaceBetween: 16,
+				updateOnWindowResize: true,
+				observer: true,
+				observeParents: true,
+				autoplay: {
+					delay: 3000,
+					// pauseOnMouseEnter: true,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: caseManager.querySelector('.swiper-pagination'),
+					type: 'bullets',
+					clickable: true,
+					// renderBullet: function (index, className) {
+					// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+					// }
+				},
+			});
+			caseSlider.el.onmouseover = function () {
+				caseSlider.autoplay.stop();
+			};
+			caseSlider.el.onmouseout = function () {
+				caseSlider.autoplay.start();
+			};
+		};
+	}
 };
 const $ = jQuery;
 
@@ -311,6 +344,7 @@ function eventHandler() {
 	JSCCommon.tabscostume('.tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
+	JSCCommon.caseSlider();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
@@ -351,19 +385,7 @@ function eventHandler() {
 
 	const caseManagers = document.querySelectorAll('.tabs__case-manager');
 	for (const caseManager of caseManagers) {
-		const caseSlider = new Swiper(caseManager.querySelector('.case-slider--js'), {
-			slidesPerView: 'auto',
-			watchOverflow: true,
-			spaceBetween: 16,
-			pagination: {
-				el: ' .swiper-pagination',
-				type: 'bullets',
-				clickable: true,
-				// renderBullet: function (index, className) {
-				// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-				// }
-			},
-		});
+
 		const caseBtn = caseManager.querySelector('.tabs__case-manager-btn');
 		caseBtn.addEventListener('click', function (e) {
 			$(this).toggleClass('active');

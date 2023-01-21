@@ -134,7 +134,8 @@
 			@include media-breakpoint-down(md) {
 				width: 100%;
 			}
-			&:hover, &:active {
+			&:hover,
+			&:active {
 				border-color: $white;
 			}
 		}
@@ -290,16 +291,16 @@
 				line-height: calc(18 / 15);
 			}
 		}
-		.swiper-pagination {
-			position: static;
-			display: flex;
-			align-items: center;
-			margin-top: rem(24);
-			.swiper-pagination-bullet {
-				margin-right: rem(7) !important;
-				width: rem(9) !important;
-				height: rem(9) !important;
-			}
+	}
+	.swiper-pagination {
+		position: static;
+		display: flex;
+		align-items: center;
+		margin-top: rem(24);
+		.swiper-pagination-bullet {
+			margin-right: rem(7) !important;
+			width: rem(9) !important;
+			height: rem(9) !important;
 		}
 	}
 
