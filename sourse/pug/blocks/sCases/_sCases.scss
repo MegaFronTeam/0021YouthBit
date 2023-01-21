@@ -59,7 +59,7 @@
 			h4 {
 				position: relative;
 				color: $white;
-				margin-bottom: rem(24);
+				margin-bottom: rem(16);
 				width: 100%;
 				padding-right: rem(24);
 				@include media-breakpoint-down(sm) {
@@ -85,7 +85,8 @@
 				display: block;
 				// font-size: rem(15);
 				font-weight: 700;
-				margin-bottom: rem(24);
+				margin-bottom: rem(16);
+				max-width: rem(600);
 				font-variation-settings: "opsz" 8, "GRAD" 0, "slnt" 0, "XTRA" 497, "XOPQ" 96, "YOPQ" 91, "YTLC" 433, "YTUC" 649,
 					"YTAS" 750, "YTDE" -177, "YTFI" 738;
 				@include media-breakpoint-down(sm) {
@@ -100,6 +101,9 @@
 					"YTAS" 750, "YTDE" -177, "YTFI" 738;
 				margin-bottom: 1em;
 				&:last-child {
+					margin-bottom: 0;
+				}
+				&:last-of-type {
 					margin-bottom: 0;
 				}
 			}
@@ -128,9 +132,13 @@
 				padding: rem(32);
 				margin-bottom: 0;
 			}
+			@include media-breakpoint-up(xxl) {
+				padding-right: rem(110);
+			}
 		}
 		&__content-btn {
 			@extend .btn, .btn-success;
+			margin-top: rem(24);
 			@include media-breakpoint-down(md) {
 				width: 100%;
 			}
@@ -140,8 +148,12 @@
 			}
 		}
 		&__tags {
-			@include roww(6px, m);
+			// @include roww(6px, m);
 			margin-bottom: rem(24);
+			.row {
+				--bs-gutter-x: #{rem(7)};
+				--bs-gutter-y: var(--bs-gutter-x);
+			}
 			.btn {
 				pointer-events: none;
 				border-radius: rem(20);
@@ -153,6 +165,8 @@
 			display: flex;
 			flex-direction: column;
 			margin-top: rem(24);
+			flex-grow: 1;
+			justify-content: flex-end;
 		}
 		&__content-link {
 			@include roww(16px, m);
@@ -216,6 +230,8 @@
 			border-radius: $border-radius-lg;
 			background-color: $light;
 			padding: rem(16);
+			display: flex;
+			flex-direction: column;
 			// @include media-breakpoint-up(md) {
 			// 	padding: rem(24);
 			// }
@@ -259,17 +275,21 @@
 		}
 		&__case-manager-body {
 			margin-top: rem(24);
+			display: flex;
+			flex-direction: column;
+			height: auto;
+			flex-grow: 1;
 			@include media-breakpoint-down(xl) {
 				display: none;
 			}
 			&.active {
-				display: block;
+				display: flex;
 			}
 		}
 	}
 
 	.case-slider {
-		max-width: rem(200);
+		max-width: rem(250);
 		margin-left: 0;
 		&__slide {
 		}
@@ -278,6 +298,11 @@
 			background-color: $white;
 			border-radius: rem(16);
 			margin-bottom: rem(24);
+			max-width: rem(176);
+			img {
+				max-width: 80%;
+				max-height: 90%;
+			}
 		}
 		&__title {
 			color: $body-color;
