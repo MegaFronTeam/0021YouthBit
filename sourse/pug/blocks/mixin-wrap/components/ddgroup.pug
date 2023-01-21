@@ -12,10 +12,11 @@ mixin ddGroupItem(txt, activeClasses='')
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
 	+e.item(class=activeClasses)
-		+e.head.dd-head-js=txt
+		+e.head.dd-head-js
+			h5!=txt
+			span
 		+e.content.dd-content-js(class=activeClasses)
 			if block
 				block
 			else
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
+				p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus doloremque ea&nbsp;itaque sint quis assumenda&nbsp;a, sit totam molestias, voluptates sapiente iure ab&nbsp;blanditiis fuga recusandae voluptatem velit, veniam eos.Ex ullam sequi quae architecto beatae fugiat ratione quaerat hic officiis commodi. Laborum explicabo, recusandae nulla&nbsp;in, facere aliquid quam quas, ut&nbsp;nam minus neque debitis iusto quaerat vero quae.Ut, possimus ullam tenetur excepturi accusamus corrupti cum? Assumenda dignissimos vitae ullam mollitia incidunt necessitatibus voluptatem quod expedita tempora, maiores eligendi in&nbsp;itaque corrupti accusamus unde quisquam blanditiis delectus iure.Dolorem commodi eius aperiam ipsum quos voluptates nihil veritatis dicta dolor laudantium, vero molestias corrupti eligendi, nostrum ipsa debitis esse natus praesentium adipisci nemo pariatur. Quia ratione magnam ea&nbsp;architecto.Quidem cupiditate enim alias maxime deleniti voluptas recusandae facere debitis, magni, at&nbsp;aut quaerat impedit, similique deserunt placeat assumenda aliquid error repudiandae nesciunt incidunt praesentium temporibus? Esse voluptate ab&nbsp;doloribus.
