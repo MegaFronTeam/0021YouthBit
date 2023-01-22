@@ -27,14 +27,17 @@ mixin sLogos(data)
 					+control()
 			+e.title-sub  Партнеры
 			+e.slider-wrap
-				+e.slider--js.swiper-slider.mb-0
+				script
+					include script.js
+				+e.slider--partners.--partners-js.--js.swiper-slider.mb-0
 					.swiper-wrapper
-						- for (var x = 0; x < 10; x++)
-							+e.slide.swiper-slide
-								+e.item
-									+e.img-wrap 
-										.img-wrap-center
-											+img("img/svg/logo-1.svg")
-									+e.title Федеральное агентство по делам молодёжи
+
+						//- - for (var x = 0; x < 10; x++)
+						//- 	+e.slide.swiper-slide
+						//- 		+e.item
+						//- 			+e.img-wrap 
+						//- 				.img-wrap-center
+						//- 					+img("img/svg/logo-1.svg")
+						//- 			+e.title Федеральное агентство по делам молодёжи
 					+control()
 	// end sLogos
