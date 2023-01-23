@@ -103,8 +103,8 @@
 												<li class="menu-item" itemprop="item"><a href="#sAbout" itemprop="url">О хакатоне</a></li>
 												<li class="menu-item" itemprop="item"><a href="#sTeam" itemprop="url">Для кого</a></li>
 												<li class="menu-item" itemprop="item"><a href="#sCases" itemprop="url">Кейсы</a></li>
-												<li class="menu-item" itemprop="item"><a href="#sPersons" itemprop="url">Эксперты</a></li>
-												<li class="menu-item" itemprop="item"><a href="#sLogos" itemprop="url">Организаторы</a></li>
+												<li class="menu-item" itemprop="item"><a href="#sPersons" itemprop="url">Наставники</a></li>
+												<li class="menu-item" itemprop="item"><a href="#sLogos" itemprop="url">Партнёры</a></li>
 												<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
 												<li class="menu-item" itemprop="item"><a href="#sFAQ" itemprop="url">FAQ</a></li>
 											</ul>
@@ -162,8 +162,8 @@
 							<p>Всероссийский хакатон <br> для талантливых IT-специалистов</p>
 							<ul>
 								<li>Соревнуйся за&nbsp;призовой фонд в&nbsp;1&nbsp;миллион рублей и&nbsp;захватывающее путешествие по&nbsp;России</li>
-								<li>Приходи кодить на&nbsp;офлайн-площадку в&nbsp;Москве</li>
 								<li>Участвуй онлайн из&nbsp;любой точки страны</li>
+								<li>Приходи кодить на&nbsp;офлайн-площадку</li>
 								<li>Регистрируйся до&nbsp;14&nbsp;февраля</li>
 							</ul>
 							<a class="headerBlock__btn btn btn-success" href="#">Зарегистрироваться
@@ -330,7 +330,8 @@
 												</div>
 											</div>
 											<div class="swiper-pagination"></div>
-											<div class="tabs__links"><a class="tabs__content-link" href="#">
+											<!-- - tabs__links скрыт классом .d-none-->
+											<div class="tabs__links d-none"><a class="tabs__content-link" href="#">
 													<svg class="icon icon-sCases-video ">
 														<use xlink:href="img/svg/sprite.svg#sCases-video"></use>
 													</svg><span>Видеоинтервью</span></a><a class="tabs__content-link" href="#">
@@ -384,7 +385,8 @@
 												</div>
 											</div>
 											<div class="swiper-pagination"></div>
-											<div class="tabs__links"><a class="tabs__content-link" href="#">
+											<!-- - tabs__links скрыт классом .d-none-->
+											<div class="tabs__links d-none"><a class="tabs__content-link" href="#">
 													<svg class="icon icon-sCases-video ">
 														<use xlink:href="img/svg/sprite.svg#sCases-video"></use>
 													</svg><span>Видеоинтервью</span></a><a class="tabs__content-link" href="#">
@@ -432,7 +434,8 @@
 												</div>
 											</div>
 											<div class="swiper-pagination"></div>
-											<div class="tabs__links"><a class="tabs__content-link" href="#">
+											<!-- - tabs__links скрыт классом .d-none-->
+											<div class="tabs__links d-none"><a class="tabs__content-link" href="#">
 													<svg class="icon icon-sCases-video ">
 														<use xlink:href="img/svg/sprite.svg#sCases-video"></use>
 													</svg><span>Видеоинтервью</span></a><a class="tabs__content-link" href="#">
@@ -448,7 +451,7 @@
 								<div class="tabs__content">
 									<div class="tabs__content-wrap">
 										<h4>Молодёжный туризм</h4>
-										<div class="small">Разработай digital-систему для онбординга новых сотрудников с&nbsp;элементами геймификации</div>
+										<div class="small">Разработай мобильное приложение для сайта студтуризм.рф</div>
 										<div class="tabs__tags">
 											<div class="row">
 												<div class="col-auto">
@@ -484,7 +487,7 @@
 																<div class="img-wrap-center"><img src="img/svg/cases-logo-2.svg" alt="" loading="lazy"/>
 																</div>
 															</div>
-															<div class="case-slider__title">&laquo;Больше, чем путешествие&raquo;
+															<div class="case-slider__title">Больше, чем путешествие
 															</div>
 														</div>
 													</div>
@@ -501,7 +504,8 @@
 												</div>
 											</div>
 											<div class="swiper-pagination"></div>
-											<div class="tabs__links"><a class="tabs__content-link" href="#">
+											<!-- - tabs__links скрыт классом .d-none-->
+											<div class="tabs__links d-none"><a class="tabs__content-link" href="#">
 													<svg class="icon icon-sCases-video ">
 														<use xlink:href="img/svg/sprite.svg#sCases-video"></use>
 													</svg><span>Видеоинтервью</span></a><a class="tabs__content-link" href="#">
@@ -591,9 +595,114 @@
 				<section class="sPersons section" id="sPersons">
 					<div class="container">
 						<div class="section-title">
-							<h2>Эксперты и Жюри</h2>
+							<h2>Наставники и&nbsp;Жюри</h2>
 						</div>
 						<div class="sPersons__title">Эксперты
+						</div>
+						<div class="sPersons__slider sPersons__slider--js swiper">
+							<div class="swiper-wrapper">
+									<div class="sPersons__slide swiper-slide">
+										<div class="sPersons__item">
+											<div class="sPersons__img-wrap"><img src="img/avatar.png" alt="" loading="lazy"/>
+											</div>
+											<div class="sPersons__name">Виктор Сожможнов
+											</div>
+											<div class="sPersons__text">Следует отметить, что высококачественный прототип будущего проекта способствует
+											</div>
+										</div>
+									</div>
+									<div class="sPersons__slide swiper-slide">
+										<div class="sPersons__item">
+											<div class="sPersons__img-wrap"><img src="img/avatar.png" alt="" loading="lazy"/>
+											</div>
+											<div class="sPersons__name">Виктория Складчинкова
+											</div>
+											<div class="sPersons__text">Прототип будущего проекта способствует
+											</div>
+										</div>
+									</div>
+									<div class="sPersons__slide swiper-slide">
+										<div class="sPersons__item">
+											<div class="sPersons__img-wrap"><img src="img/avatar.png" alt="" loading="lazy"/>
+											</div>
+											<div class="sPersons__name">Ким Самаджокис
+											</div>
+											<div class="sPersons__text">Следует отметить
+											</div>
+										</div>
+									</div>
+									<div class="sPersons__slide swiper-slide">
+										<div class="sPersons__item">
+											<div class="sPersons__img-wrap"><img src="img/avatar.png" alt="" loading="lazy"/>
+											</div>
+											<div class="sPersons__name">Николай Ионов
+											</div>
+											<div class="sPersons__text">Следует отметить, что высококачественный 
+											</div>
+										</div>
+									</div>
+									<div class="sPersons__slide swiper-slide">
+										<div class="sPersons__item">
+											<div class="sPersons__img-wrap"><img src="img/avatar.png" alt="" loading="lazy"/>
+											</div>
+											<div class="sPersons__name">Виктор Сожможнов
+											</div>
+											<div class="sPersons__text">Следует отметить, что высококачественный прототип будущего проекта способствует
+											</div>
+										</div>
+									</div>
+									<div class="sPersons__slide swiper-slide">
+										<div class="sPersons__item">
+											<div class="sPersons__img-wrap"><img src="img/avatar.png" alt="" loading="lazy"/>
+											</div>
+											<div class="sPersons__name">Виктория Складчинкова
+											</div>
+											<div class="sPersons__text">Прототип будущего проекта способствует
+											</div>
+										</div>
+									</div>
+									<div class="sPersons__slide swiper-slide">
+										<div class="sPersons__item">
+											<div class="sPersons__img-wrap"><img src="img/avatar.png" alt="" loading="lazy"/>
+											</div>
+											<div class="sPersons__name">Ким Самаджокис
+											</div>
+											<div class="sPersons__text">Следует отметить
+											</div>
+										</div>
+									</div>
+									<div class="sPersons__slide swiper-slide">
+										<div class="sPersons__item">
+											<div class="sPersons__img-wrap"><img src="img/avatar.png" alt="" loading="lazy"/>
+											</div>
+											<div class="sPersons__name">Николай Ионов
+											</div>
+											<div class="sPersons__text">Следует отметить, что высококачественный 
+											</div>
+										</div>
+									</div>
+							</div>
+								<div class="row">
+									<div class="col">
+										<div class="swiper-pagination"></div>
+									</div>
+									<div class="col-auto">
+										<div class="arrow-wrap">
+											<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+												<svg class="icon icon-arrow-left ">
+													<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+												</svg>
+											</div>
+											<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+												<svg class="icon icon-arrow-right ">
+													<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+						<div class="sPersons__title">Трекеры
 						</div>
 						<div class="sPersons__slider sPersons__slider--js swiper">
 							<div class="swiper-wrapper">
@@ -807,10 +916,10 @@
 				</section>
 				<!-- end sPersons-->
 				<!-- start sLogos-->
-				<section class="sLogos section" id="sLogos"><img src="img/page-bg-img-3.png" alt="" loading="lazy"/>
+				<section class="sLogos section" id="sLogos">
 					<div class="container">
 						<div class="section-title">
-							<h2>Организаторы и партнёры</h2>
+							<h2>Организаторы и Партнёры</h2>
 						</div>
 						<div class="sLogos__title-sub"> Организаторы
 						</div>

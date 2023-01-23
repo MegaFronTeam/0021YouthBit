@@ -3,8 +3,8 @@
 		{"name":"О хакатоне", "url":"#sAbout"},
 		{"name":"Для кого", "url":"#sTeam"},
 		{"name":"Кейсы", "url":"#sCases"},
-		{"name":"Эксперты", "url":"#sPersons"},
-		{"name":"Организаторы", "url":"#sLogos"},
+		{"name":"Наставники", "url":"#sPersons"},
+		{"name":"Партнёры", "url":"#sLogos"},
 		{"name":"Контакты", "url":"#sContact"},
 		{"name":"FAQ", "url":"#sFAQ"}
 	],

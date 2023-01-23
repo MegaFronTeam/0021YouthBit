@@ -33,8 +33,8 @@
 			font-size: rem(20);
 		}
 	}
-	Logos__slider &__text-wrap {
-		max-width: rem(505);
+	&__text-wrap {
+		max-width: rem(500);
 	}
 	.col-md-auto {
 		@include media-breakpoint-down(md) {

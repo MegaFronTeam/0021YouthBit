@@ -307,7 +307,7 @@ const JSCCommon = {
 	caseSlider() {
 		const caseManagers = document.querySelectorAll('.tabs__case-manager');
 		for (const caseManager of caseManagers) {
-			if (caseManager.querySelectorAll(".swiper-slide").length > 1) { 
+			if (caseManager.querySelectorAll(".swiper-slide").length > 1) {
 				const caseSlider = new Swiper(caseManager.querySelector('.case-slider--js'), {
 					slidesPerView: 'auto',
 					watchOverflow: true,
@@ -327,9 +327,9 @@ const JSCCommon = {
 					},
 					pagination: {
 						el: caseManager.querySelector('.swiper-pagination'),
-					type: 'bullets',
-					clickable: true,
-					// renderBullet: function (index, className) {
+						type: 'bullets',
+						clickable: true,
+						// renderBullet: function (index, className) {
 						// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
 						// }
 					},
@@ -341,11 +341,11 @@ const JSCCommon = {
 					caseSlider.autoplay.start();
 				};
 
- 
+
 				caseSlider.on('slideChange', function () {
 					caseSlider.pagination.render();
 					caseSlider.pagination.update();
-					}); 
+				});
 			}
 		};
 	}
@@ -406,6 +406,28 @@ function eventHandler() {
 			// e.preventDefault();
 		});
 	};
+
+	function setFixedNav() {
+		let topNav = document.querySelector('.top-nav  ');
+		if (!topNav) return;
+		window.scrollY > 0
+			? topNav.classList.add('fixed')
+			: topNav.classList.remove('fixed');
+	}
+
+	function whenResize() {
+		setFixedNav();
+	}
+
+	window.addEventListener('scroll', () => {
+		setFixedNav();
+
+	}, { passive: true })
+	window.addEventListener('resize', () => {
+		whenResize();
+	}, { passive: true });
+
+	whenResize();
 
 
 

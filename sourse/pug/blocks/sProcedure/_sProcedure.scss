@@ -158,6 +158,9 @@
 				@include media-breakpoint-up(md) {
 					border-width: rem(16);
 				}
+				b {
+					font-weight: 700;
+				}
 			}
 		}
 	}

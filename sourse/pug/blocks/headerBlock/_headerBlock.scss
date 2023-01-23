@@ -12,10 +12,10 @@
 			display: block;
 		}
 	}
-	@include media-breakpoint-up(sm) {
-		--sPT: #{rem(100)};
-	}
 	--sPT: #{rem(20)};
+	@include media-breakpoint-up(sm) {
+		--sPT: #{rem(70)};
+	}
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	// min-height: 100vh;
@@ -79,7 +79,7 @@
 		@include media-breakpoint-up(sm) {
 			position: absolute;
 			left: 100%;
-			top: rem(-30);
+			// top: rem(-30);
 			width: rem(409);
 			margin-top: 0;
 		}

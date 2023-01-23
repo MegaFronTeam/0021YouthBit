@@ -3,7 +3,7 @@ mixin sPersons(data)
 	+b.SECTION.sPersons.section#sPersons&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Эксперты и Жюри
+				h2 Наставники и&nbsp;Жюри
 			mixin slide(t,p)
 				+e.slide.swiper-slide
 					+e.item
@@ -18,6 +18,16 @@ mixin sPersons(data)
 					.col-auto
 						+arrow 
 			+e.title Эксперты
+			+e.slider--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 2; x++)
+						+slide('Виктор Сожможнов','Следует отметить, что высококачественный прототип будущего проекта способствует')
+						+slide('Виктория Складчинкова','Прототип будущего проекта способствует')
+						+slide('Ким Самаджокис','Следует отметить')
+						+slide('Николай Ионов','Следует отметить, что высококачественный ')
+				+control()
+				
+			+e.title Трекеры
 			+e.slider--js.swiper
 				.swiper-wrapper
 					- for (var x = 0; x < 2; x++)

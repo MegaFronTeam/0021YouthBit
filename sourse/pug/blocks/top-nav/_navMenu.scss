@@ -45,6 +45,7 @@
 }
 
 .toggle-menu-mobile {
+	
 	--h: #{rem(2)};
 	--color: #{$primary};
 	--position: calc(var(--h) * 3);
@@ -115,10 +116,10 @@
 		// height: calc(var(--vh, 1vh) * 100);
 		// height: 100vh;
 		width: 280px;
-		top: 0;
+		top: rem(82);
 		// left: 0;
 		right: 0;
-		background-color: $light;
+		background-color: $white;
 		&:not(.active) {
 			transform: translate3d(120%, 0, 0);
 			--opacity: 0;

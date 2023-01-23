@@ -34,13 +34,18 @@
 			max-width: rem(540);
 			padding-right: rem(50);
 		}
+		ul {
+			margin-bottom: rem(32);
+		}
 	}
 	h2,
 	.text-wrap {
 	}
 	&__btn {
 		font-size: 15px;
+		width: 100%;
 		@include media-breakpoint-up(sm) {
+			width: auto;
 			font-size: rem(25);
 		}
 		padding: em(12) em(22);

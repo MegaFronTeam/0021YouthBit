@@ -2,8 +2,22 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	@include mt;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
 	padding-top: rem(23);
 	padding-bottom: rem(6);
+	background-color: $white;
+
+	&.fixed {
+		padding: rem(16) 0 rem(6);
+		box-shadow: 0px 0px 5px rgba($color: $primary, $alpha: 0.5);
+
+		.menu-mobile {
+			top: rem(75);
+		}
+	}
 	&__row {
 		--bs-gutter-x: #{rem(24)};
 		--bs-gutter-y: var(--bs-gutter-x);
