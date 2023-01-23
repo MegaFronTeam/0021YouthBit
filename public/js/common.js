@@ -222,7 +222,7 @@ const JSCCommon = {
 			}
 			else {
 				let destination = $(elementClick).offset().top;
-				$('html, body').animate({ scrollTop: destination - 80 }, 0);
+				$('html, body').animate({ scrollTop: destination - 75 }, 0);
 				return false;
 			}
 		});
@@ -361,6 +361,7 @@ function eventHandler() {
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
+	JSCCommon.animateScroll();
 
 	const swipersPersons = new Swiper('.sPersons__slider--js', {
 		slidesPerView: 'auto',
