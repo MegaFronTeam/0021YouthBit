@@ -44,8 +44,8 @@
 		// @include col-sw;
 		padding-left: 15px;padding-right: 15px;
 		img{
-			// max-width: 80%;
-			max-height: 80%;
+			max-width: 80%;
+			max-height: 60%;
 		}
 		@include media-breakpoint-up(lg) {
 			max-width: 25% !important;

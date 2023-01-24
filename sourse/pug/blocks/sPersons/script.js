@@ -17,7 +17,7 @@ function getStaff(roleName) {
 			};
 			for (const item of arr) {
 				// console.log(item); 
-				document.querySelector(`#${roleName} .swiper-wrapper`).insertAdjacentHTML("beforeend", template(item.avatar, item.surname + " " + item.name, item.bio));
+				document.querySelector(`#${roleName} .swiper-wrapper`).insertAdjacentHTML("beforeend", template(item.avatar_url, item.surname + " " + item.name, item.bio));
 			}
 		});
 	}

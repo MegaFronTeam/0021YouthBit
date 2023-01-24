@@ -626,7 +626,7 @@ const template = function (img, title, a) {
 			};
 			for (const item of arr) {
 				// console.log(item); 
-				document.querySelector(`#${roleName} .swiper-wrapper`).insertAdjacentHTML("beforeend", template(item.avatar, item.surname + " " + item.name, item.bio));
+				document.querySelector(`#${roleName} .swiper-wrapper`).insertAdjacentHTML("beforeend", template(item.avatar_url, item.surname + " " + item.name, item.bio));
 			}
 		});
 	}
@@ -863,11 +863,10 @@ getFAQ();
 												</a>
 											</div>
 										</div>
-										<div class="col-lg text-lg-end">
-											<svg class="icon icon-sContact-logo ">
-												<use xlink:href="img/svg/sprite.svg#sContact-logo"></use>
-											</svg>
-										</div>
+										<div class="col-lg text-lg-end"><a href="https://myrosmol.ru/" target="_blank"> 
+												<svg class="icon icon-sContact-logo ">
+													<use xlink:href="img/svg/sprite.svg#sContact-logo"></use>
+												</svg></a></div>
 									</div>
 								</div>
 							</div>
