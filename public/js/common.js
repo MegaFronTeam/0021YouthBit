@@ -253,33 +253,13 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	makeDDGroup() {
-		let parents = document.querySelectorAll('.dd-group-js');
-		for (let parent of parents) {
-			if (parent) {
-				// childHeads, kind of funny))
-				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
-				$(ChildHeads).click(function () {
-					let clickedHead = this;
 
-					$(ChildHeads).each(function () {
-						if (this === clickedHead) {
-							//parent element gain toggle class, style head change via parent
-							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
-								$(this).toggleClass('active');
-							});
-						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
-					});
-
-				});
-			}
-		}
+				document.addEventListener("click", function(event){
+					let target = event.target.closest(".dd-head-js");
+					if(!target) return;
+					target.parentElement.classList.toggle('active');
+					$(target.nextElementSibling).slideToggle();
+				})
 	},
 	imgToSVG() {
 		const convertImages = (query, callback) => {
@@ -404,6 +384,7 @@ function eventHandler() {
 		caseBtn.addEventListener('click', function (e) {
 			$(this).toggleClass('active');
 			$(this).siblings('.tabs__case-manager-body').toggleClass('active');
+			JSCCommon.caseSlider();
 			// e.preventDefault();
 		});
 	};

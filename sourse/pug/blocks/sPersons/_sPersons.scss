@@ -81,6 +81,15 @@
 		position: relative;
 		margin-bottom: rem(28);
 		@include block;
+		&::before{
+			position: relative;
+			z-index: 2;
+			mask-image: url(../img/mask.png);
+			mask-size: cover; 
+			// position: absolute;
+			// left: 0;
+			background: linear-gradient(90deg, #897AD6 0%, rgba(137, 122, 214, 0) 50%);
+		}
 		&::after{
 			content: '';
 			width: 100%;
@@ -101,6 +110,7 @@
 			mask-size: cover; 
 			position: absolute;
 			left: 0;
+			background: linear-gradient(90deg, #897AD6 0%, rgba(137, 122, 214, 0) 50%);
 			top: 0;
 		}
 	}

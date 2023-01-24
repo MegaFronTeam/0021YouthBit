@@ -1,15 +1,28 @@
 function getPartners() {
 	
-	const url = `${baseUrl}/site/case`;
+	const url = `${baseUrl}/site/company`
 	handleRequest(url).then(res => {
-		// console.log(res.cases)
-		const arr = res.companies;
+			const arr = res.filter(el => el.category ==='Партнёры');
 		for (const item of arr) {
-			console.log(item);
+			// console.log(item);
 			
-			document.querySelector(".sLogos__slider--partners-js .swiper-wrapper").insertAdjacentHTML("beforeend", template(item.avatar_url, item.description));
+			document.querySelector(".sLogos__slider--partners-js .swiper-wrapper").insertAdjacentHTML("beforeend", template(item.avatar_url, item.description, item.link));
 		}
 	});
 }
 
 getPartners();
+
+function getOrgs() {
+	
+	const url = `${baseUrl}/site/company`;
+	handleRequest(url).then(res => {
+		const arr = res.filter(el => el.category ===
+			'Организатор и оператор конкурса');
+		for (const item of arr) { 
+			document.querySelector(".sLogos__slider--org-js .swiper-wrapper").insertAdjacentHTML("beforeend", template(item.avatar_url, item.description, item.link));
+		}
+	});
+}
+
+getOrgs();

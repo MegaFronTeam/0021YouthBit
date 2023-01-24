@@ -1,12 +1,12 @@
 mixin ddGroup()
 	//-родителю елементов .dd-group-js
-	+b.dd-group.dd-group-js
-		if block
-			block
-		else
-			+ddGroupItem('вопрос1', 'active')
-			+ddGroupItem('вопрос2')
-			+ddGroupItem('вопрос3')
+	//- +b.dd-group.dd-group-js
+	//- 	block
+		//- if block
+		//- else
+		//- 	+ddGroupItem('вопрос1', 'active')
+		//- 	+ddGroupItem('вопрос2')
+		//- 	+ddGroupItem('вопрос3')
 
 mixin ddGroupItem(txt, activeClasses='')
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
