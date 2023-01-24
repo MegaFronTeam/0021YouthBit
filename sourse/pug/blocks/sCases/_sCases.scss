@@ -288,9 +288,28 @@
 		}
 	}
 
+	@include media-breakpoint-up(md) {
+		.swiper-pagination{
+			display: none;
+		}
+		.swiper-slide{
+			height: auto;
+			margin-bottom: 2rem;
+			&.swiper-slide-duplicate{
+				display: none !important;
+			}
+		}
+	}
 	.case-slider {
 		max-width: rem(250);
 		margin-left: 0;
+		@include media-breakpoint-up(md) {
+			.swiper-wrapper{
+				display: block !important;
+				transform: none !important;
+			}
+		}
+
 		&__slide {
 		}
 		&__img-wrap {
