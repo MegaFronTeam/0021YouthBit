@@ -16,44 +16,39 @@
 			display: block;
 		}
 	}
-	&__row{
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
-
 	}
-	.section-title{
-		
+	.section-title {
 	}
-	&__col{
-
+	&__col {
 	}
-	&__item{
-
+	&__item {
 	}
-	&__title-sub{
-		@include rfs(32px);
+	&__title-sub {
+		@include rfs(24px);
+		margin-bottom: rem(40);
 	}
-	.swiper-wrapper{
+	.swiper-wrapper {
 		@include row-sw;
 	}
-	&__slider{
-
+	&__slider {
 		margin-bottom: rem(120);
 	}
-	&__slide{
+	&__slide {
 		// @include col-sw;
-		padding-left: 15px;padding-right: 15px;
-		img{
-			max-width: 80%;
-			max-height: 60%;
+		padding-left: 15px;
+		padding-right: 15px;
+		img {
+			max-width: 65%;
+			max-height: 65%;
 		}
 		@include media-breakpoint-up(lg) {
 			max-width: 25% !important;
 			width: 25% !important;
-
 		}
 		@include media-breakpoint-up(sm) {
-
 			width: 300px;
 		}
 		flex: 0 0 auto !important;
@@ -61,43 +56,52 @@
 		margin-bottom: rem(50);
 
 		font-weight: 471;
-		font-size: 20px;
-		line-height: 23px;
-		text-align: center; 
-		color: #251E45;
-		font-stretch: 134;
+		font-size: rem(15);
+		line-height: calc(18 / 15);
+		text-align: center;
+		color: #251e45;
+		// font-stretch: 134;
 	}
-	&__item{
+	&__item {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: rem(280);
 	}
-
-	&__img-wrap{
-		@include block;
+	&__title {
+		max-width: 18em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__img-wrap {
+		@include block(184, 124);
 	}
 
-
-
-	.swiper-pagination{
+	.swiper-pagination {
 		position: relative;
 		text-align: left;
-		margin-top: .5rem;
+		margin-top: 0.5rem;
 	}
-	.arrow-wrap{
+	.arrow-wrap {
 		display: flex;
 		align-items: center;
 	}
-	.swiper-button-hand{
+	.swiper-button-hand {
 		position: static;
 		margin-left: rem(30);
 		// display: inline-block !important;
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sLogos
