@@ -343,7 +343,11 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	JSCCommon.animateScroll();
 
-	const swipersPersons = new Swiper('.sPersons__slider--js', {
+
+
+
+
+	const swipersPersons = new Swiper('.sPersons__slider--js, .sLogos__slider--js, .base-slider-js', {
 		slidesPerView: 'auto',
 		watchOverflow: true,
 		navigation: {
@@ -360,22 +364,22 @@ function eventHandler() {
 		},
 	});
 
-	const swipersLogos = new Swiper('.sLogos__slider--js', {
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
-	});
+	// const swipersLogos = new Swiper('.sLogos__slider--js', {
+	// 	slidesPerView: 'auto',
+	// 	watchOverflow: true,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+	// 	pagination: {
+	// 		el: ' .swiper-pagination',
+	// 		type: 'bullets',
+	// 		clickable: true,
+	// 		// renderBullet: function (index, className) {
+	// 		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+	// 		// }
+	// 	},
+	// });
 
 	const caseManagers = document.querySelectorAll('.tabs__case-manager');
 	for (const caseManager of caseManagers) {

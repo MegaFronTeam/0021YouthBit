@@ -123,3 +123,20 @@
 	width: auto;
 	margin-right: rem(32);
 }
+
+.swiper{
+	.swiper-pagination{
+		position: relative;
+		text-align: left;
+		margin-top: .5rem;
+	}
+	.arrow-wrap{
+		display: flex;
+		align-items: center;
+	}
+	.swiper-button-hand{
+		position: static;
+		margin-left: rem(30);
+		// display: inline-block !important;
+	}
+}

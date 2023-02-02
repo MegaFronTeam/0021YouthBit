@@ -18,7 +18,12 @@ mixin arrow()
 		.swiper-button-hand.swiper-button-hand-next.swiper-button-next
 			+icon('arrow-right')
 //- /arrow for swiper-slider
-
+mixin control()
+	.row
+		.col
+			.swiper-pagination
+		.col-auto
+			+arrow 
 mixin ie11()
 	//- modernizer and for ie11
 	 
