@@ -2,22 +2,24 @@ mixin sCoworkings(data)
 	// start sCoworkings
 	+b.SECTION.sCoworkings.section#sCoworkings&attributes(attributes)
 		.container
+			script
+				include script.js
 			+b.section-title
 				h2 Коворкинги
 				p Коворкинг&nbsp;&mdash; отличная возможность для команд участвовать в&nbsp;хакатоне не&nbsp;дистанционно, а&nbsp;очно&nbsp;&mdash; на&nbsp;оборудованной площадке со&nbsp;скоростным интернетом и&nbsp;удобными рабочими местами. В&nbsp;коворкинге ты&nbsp;сможешь ощутить реальную атмосферу IT-соревнования, познакомиться с&nbsp;другими участниками и&nbsp;обменяться опытом с&nbsp;единомышленниками.
 				p: strong Чтобы забронировать место, выбери одну из&nbsp;площадок в&nbsp;личном кабинете. Количество мест ограничено, рекомендуем поспешить!
 			+e.slider--js.swiper.base-slider-js
 				.swiper-wrapper
-					mixin slide(i,t,p)
-						+e.slide.swiper-slide
-							+e.item
-								+e.img-wrap
-									+img(`img/sCoworkings-${i}.jpg`)
-								+e.title= t
-								p= p
+					//- mixin slide(i,t,p)
+					//- 	+e.slide.swiper-slide
+					//- 		+e.item
+					//- 			+e.img-wrap
+					//- 				+img(`img/sCoworkings-${i}.jpg`)
+					//- 			+e.title= t
+					//- 			p= p
 
-					- for (var x = 0; x < 4; x++)
-						+slide('1','GrowUp Павелецкая','г. Москва')
+					//- - for (var x = 0; x < 4; x++)
+					//- 	+slide('1','GrowUp Павелецкая','г. Москва')
 					//- 	+slide('Виктория Складчинкова','Прототип будущего проекта способствует')
 					//- 	+slide('Ким Самаджокис','Следует отметить')
 					//- 	+slide('Николай Ионов','Следует отметить, что высококачественный ')

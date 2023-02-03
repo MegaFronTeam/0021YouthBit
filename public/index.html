@@ -600,6 +600,67 @@ const template = function (img, title, a) {
 					</div>
 				</section>
 				<!-- end sPrize-->
+				<!-- start sCoworkings-->
+				<section class="sCoworkings section" id="sCoworkings">
+					<div class="container">
+						<script>function getPlaygrounds() {
+	const url = `${baseUrl}/site/playground`;
+	handleRequest(url).then(res => {
+		const arr = res;
+		
+		const template = function (img, title, p) {
+			return `
+					<div class="sCoworkings__slide swiper-slide">
+						<div class="sCoworkings__item">
+							<div class="sCoworkings__img-wrap"><img src="${img}" alt="" loading="lazy"/>
+							</div>
+							<div class="sCoworkings__title">${title}</div>
+							<p>${p}</p>
+						</div>
+					</div>`;
+		};
+		
+		for (const item of arr) {
+			// console.log(item);
+
+			document.querySelector(".sCoworkings__slider .swiper-wrapper").insertAdjacentHTML("beforeend", template(item.avatar_direction_url, item.name, item.city));
+		}
+	});
+
+};
+
+getPlaygrounds();
+						</script>
+						<div class="section-title">
+							<h2>Коворкинги</h2>
+							<p>Коворкинг&nbsp;&mdash; отличная возможность для команд участвовать в&nbsp;хакатоне не&nbsp;дистанционно, а&nbsp;очно&nbsp;&mdash; на&nbsp;оборудованной площадке со&nbsp;скоростным интернетом и&nbsp;удобными рабочими местами. В&nbsp;коворкинге ты&nbsp;сможешь ощутить реальную атмосферу IT-соревнования, познакомиться с&nbsp;другими участниками и&nbsp;обменяться опытом с&nbsp;единомышленниками.</p>
+							<p><strong>Чтобы забронировать место, выбери одну из&nbsp;площадок в&nbsp;личном кабинете. Количество мест ограничено, рекомендуем поспешить!</strong></p>
+						</div>
+						<div class="sCoworkings__slider sCoworkings__slider--js swiper base-slider-js">
+							<div class="swiper-wrapper"></div>
+							<div class="row">
+								<div class="col">
+									<div class="swiper-pagination"></div>
+								</div>
+								<div class="col-auto">
+									<div class="arrow-wrap">
+										<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+											<svg class="icon icon-arrow-left ">
+												<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+											</svg>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+											<svg class="icon icon-arrow-right ">
+												<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sCoworkings-->
 				<!-- start sPersons-->
 				<section class="sPersons section" id="sPersons">
 					<div class="container">
