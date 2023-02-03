@@ -2,7 +2,7 @@ function getPartners() {
 	
 	const url = `${baseUrl}/site/company`
 	handleRequest(url).then(res => {
-			const arr = res.filter(el => el.category ==='Партнёры');
+		const arr = res.filter(el => el.category ==='Партнёры');
 		for (const item of arr) {
 			// console.log(item);
 			
