@@ -18,7 +18,7 @@ function getPlaygrounds() {
 		for (const item of arr) {
 			// console.log(item);
 
-			document.querySelector(".sCoworkings__slider .swiper-wrapper").insertAdjacentHTML("beforeend", template(item.avatar_direction_url, item.name, item.city));
+			document.querySelector(".sCoworkings__slider .swiper-wrapper").insertAdjacentHTML("beforeend", template(item.avatar_url, item.name, item.city));
 		}
 	});
 

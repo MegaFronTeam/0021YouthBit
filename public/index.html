@@ -623,7 +623,7 @@ const template = function (img, title, a) {
 		for (const item of arr) {
 			// console.log(item);
 
-			document.querySelector(".sCoworkings__slider .swiper-wrapper").insertAdjacentHTML("beforeend", template(item.avatar_direction_url, item.name, item.city));
+			document.querySelector(".sCoworkings__slider .swiper-wrapper").insertAdjacentHTML("beforeend", template(item.avatar_url, item.name, item.city));
 		}
 	});
 
@@ -751,7 +751,7 @@ getStaff('jury');
 	
 	const url = `${baseUrl}/site/company`
 	handleRequest(url).then(res => {
-			const arr = res.filter(el => el.category ==='Партнёры');
+		const arr = res.filter(el => el.category ==='Партнёры');
 		for (const item of arr) {
 			// console.log(item);
 			
