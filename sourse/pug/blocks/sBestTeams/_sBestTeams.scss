@@ -1,8 +1,12 @@
 // start .sBestTeams
 .sBestTeams {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(16)};
+	--sPB: #{rem(16)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(50)};
+	}
 	&__row {
 		--bs-gutter-x: #{rem(16)};
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -12,6 +16,18 @@
 	&__col {
 	}
 	&__item {
+	}
+	&__list {
+		margin-bottom: rem(32);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		h4 {
+			font-size: rem(20);
+			line-height: calc(23 / 20);
+			margin-bottom: rem(16);
+			color: $primary;
+		}
 	}
 	.tabs {
 		&__caption {
@@ -70,6 +86,11 @@
 			}
 			@include media-breakpoint-up(xl) {
 				display: none;
+			}
+			&:hover {
+				&::after {
+					background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='11' viewBox='0 0 18 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L9 9L17 1' stroke='white' stroke-width='2'/%3e%3c/svg%3e ");
+				}
 			}
 			&.active {
 				display: none;
@@ -160,17 +181,19 @@
 	}
 	&.best-item--first {
 		.best-item__place {
-			background-image: linear-gradient(157.26deg, #F0D800 14.77%, rgba(240, 216, 0, 0.73) 76.9%, #F0D800 95.22%);
+			background-image: linear-gradient(157.26deg, #f0d800 14.77%, rgba(240, 216, 0, 0.73) 76.9%, #f0d800 95.22%);
 		}
 	}
 	&.best-item--second {
 		.best-item__place {
-			background-image: linear-gradient(157.26deg, #CACACA 14.77%, rgba(202, 202, 202, 0.72) 76.9%, #CACACA 95.22%);
+			background-image: linear-gradient(157.26deg, #cacaca 14.77%, rgba(202, 202, 202, 0.72) 76.9%, #cacaca 95.22%);
 		}
 	}
 	&.best-item--third {
 		.best-item__place {
-			background-image: linear-gradient(157.26deg, #FFBF48 14.77%, rgba(255, 191, 72, 0.7) 76.9%, #FFBF48 95.22%), linear-gradient(157.26deg, #F09C00 14.77%, rgba(240, 156, 0, 0.63) 76.9%, #F09C00 95.22%), linear-gradient(157.26deg, #F0D800 14.77%, rgba(240, 216, 0, 0.86) 76.9%, #F0D800 95.22%);
+			background-image: linear-gradient(157.26deg, #ffbf48 14.77%, rgba(255, 191, 72, 0.7) 76.9%, #ffbf48 95.22%),
+				linear-gradient(157.26deg, #f09c00 14.77%, rgba(240, 156, 0, 0.63) 76.9%, #f09c00 95.22%),
+				linear-gradient(157.26deg, #f0d800 14.77%, rgba(240, 216, 0, 0.86) 76.9%, #f0d800 95.22%);
 		}
 	}
 	&__head {
@@ -256,6 +279,33 @@
 		color: $success;
 		&:hover {
 			color: $white;
+		}
+	}
+	&.best-item--light {
+		background-color: $white;
+		.best-item__team {
+			small {
+				color: $body-color;
+			}
+			h5 {
+				color: $primary;
+			}
+		}
+		ul {
+			li {
+				span {
+					color: $body-color;
+				}
+				small {
+					color: #76728a;
+				}
+			}
+		}
+		.best-item__more {
+			color: $primary;
+			&:hover {
+				color: $success;
+			}
 		}
 	}
 }
