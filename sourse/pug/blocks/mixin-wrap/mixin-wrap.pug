@@ -58,3 +58,25 @@ mixin page-head(t)
 				+e.btn-back(href="#")
 					+icon('btn-back')
 				h1!= t
+
+
+mixin sBestTeamsItem(place, team, city, ...names)
+	+b.best-item&attributes(attributes)
+		if place
+			+e.head
+				+e.place
+					span!= place
+					small место
+				+e.team
+					small Команда
+					h5!= team
+		ul
+			each name in names
+				li
+					span!= name
+					small!= city
+		if place
+			+e.more(href="#") Подробнее
+
+
+		
