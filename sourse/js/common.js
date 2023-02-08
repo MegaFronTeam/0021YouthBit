@@ -364,6 +364,12 @@ function eventHandler() {
 		},
 	});
 
+	// const tabsSlider = new Swiper('.tabs-slider--js', {
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	watchOverflow: true,
+	// });
+
 	// const swipersLogos = new Swiper('.sLogos__slider--js', {
 	// 	slidesPerView: 'auto',
 	// 	watchOverflow: true,
