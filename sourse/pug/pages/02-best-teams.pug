@@ -1,0 +1,45 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sBestTeams/_sBestTeams.pug
+include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sProcedure/_sProcedure.pug
+//- include ../blocks/sCases/_sCases.pug
+//- include ../blocks/sPrize/_sPrize.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sTeam/_sTeam.pug
+//- include ../blocks/sPersons/_sPersons.pug
+//- include ../blocks/sLogos/_sLogos.pug
+//- include ../blocks/sFAQ/_sFAQ.pug
+//- include ../blocks/sCoworkings/_sCoworkings.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'inner-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= '17-19 февраля 2023 г.:  Хакатон «‎Молодёжный бит»‎ для талантливых ИТ-специалистов'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head(`Лучшие команды в&nbsp;кейсе`)
+		+sBestTeams()
+		+sContact()
+	+footer()
+
+
+

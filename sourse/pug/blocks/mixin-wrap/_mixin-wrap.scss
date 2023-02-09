@@ -1,10 +1,8 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(10px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
@@ -15,30 +13,26 @@
 		color: $white;
 		background-color: $primary;
 		border: 1px solid transparent;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 			// color: $primary;
 			background-color: $link-hover-color;
 			border-color: $link-hover-color;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(20);
 		&-telegram {
 			margin-right: 3px;
 		}
 	}
-
-
 }
 
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -46,23 +40,20 @@
 	}
 }
 
-
-
-
-.addBlock{
+.addBlock {
 	color: var(--color, #{$primary});
 	border: 1px solid;
 	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
 		height: rem(45);
 	}
-	&__btn{
+	&__btn {
 		color: inherit;
 		height: rem(45);
 		position: relative;
@@ -76,24 +67,23 @@
 		// padding-right: rem(8);
 		width: rem(26);
 		&::before,
-		&::after{
-			content: '';
+		&::after {
+			content: "";
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
 		}
-		&--plus::after{
+		&--plus::after {
 			transform: rotate(90deg);
 		}
 	}
 }
 
-
-.search-block{
+.search-block {
 	position: relative;
-	input{
+	input {
 		font-size: 14px;
 		width: 100%;
 		border: none !important;
@@ -102,11 +92,11 @@
 		padding-top: rem(14);
 		padding-bottom: rem(14);
 	}
-	.icon{
+	.icon {
 		font-size: rem(20);
 		border: none !important;
 	}
-	button{
+	button {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -119,24 +109,72 @@
 	}
 }
 
-.breadcrumb-item{
+.breadcrumb-item {
 	width: auto;
 	margin-right: rem(32);
 }
 
-.swiper{
-	.swiper-pagination{
+.swiper {
+	.swiper-pagination {
 		position: relative;
 		text-align: left;
-		margin-top: .5rem;
+		margin-top: 0.5rem;
 	}
-	.arrow-wrap{
+	.arrow-wrap {
 		display: flex;
 		align-items: center;
 	}
-	.swiper-button-hand{
+	.swiper-button-hand {
 		position: static;
 		margin-left: rem(30);
 		// display: inline-block !important;
+	}
+}
+
+.page-head {
+	padding-top: rem(10);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(20);
+	}
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(30);
+	}
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(50);
+	}
+	&__title {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			align-items: center;
+		}
+		h1 {
+			margin-bottom: 0;
+			margin-top: rem(6);
+			@include media-breakpoint-up(lg) {
+				margin-top: 0;
+
+			}
+		}
+	}
+	&__btn-back {
+		display: block;
+		padding-right: rem(10);
+		padding-top: rem(10);
+		padding-bottom: rem(10);
+		@include media-breakpoint-up(md) {
+			padding-right: rem(35);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-right: rem(45);
+		}
+		@include media-breakpoint-up(xl) {
+			padding-right: rem(55);
+		}
+		.icon {
+			font-size: rem(24);
+		}
 	}
 }
