@@ -125,6 +125,7 @@
 		color: #76728A;
 		font-stretch: 100;
 		font-variation-settings: 'opsz' 8, 'GRAD' 0, 'slnt' 0, 'XTRA' 497, 'XOPQ' 96, 'YOPQ' 91, 'YTLC' 433, 'YTUC' 649, 'YTAS' 750, 'YTDE' -177, 'YTFI' 738;
+		@include ell;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
