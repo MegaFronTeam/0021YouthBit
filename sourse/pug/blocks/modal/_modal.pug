@@ -4,14 +4,42 @@ mixin modal()
 	//- a(href="modal-call").link-modal-js modal-call 
 	div(id="modal-call"  style="display: none" )
 		+b.modal-win
-			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+			+b.winner
+				+e.row.row
+					+e.col.col-xl-auto.order-xl-4
+						+e.title.d-xl-none Stinger 2.0
+						+sBestTeamsItem(``, ``, `Ярославская область`, `Ярославский Валентин`, `Константиновский Александр`, `Яровая Валентина`, `Кипин Максим`, `Яровая Валентина`)
+					.col
+						+e.content
+							+e.title Stinger 2.0
+							ul
+								li
+									small Тизер решения
+									p Web-приложение для организации взаимодействия между поставщиками сельскохозяйственной продукции, перевозчиками и заказчиками c помощью алгоритмов рекомендации, геолокации и системы электронных очередей.Web-приложение для организации взаимодействия между поставщиками сельскохозяйственной продукции, перевозчиками и заказчиками c помощью алгоритмов рекомендации, геолокации и системы электронных очередей.
+								li
+									small Стек решения
+									p фреймворк django, база данных postgres
+								li
+									small Уникальность
+									p Уникальность нашей платформы заключается в комплексном решении, объединяющем поставщиков, закупщиков и перевозчиков. Платформа упрощает заключение договоров с помощью электронных подписей и помогает перевозчикам экономить на топливе.
+								li
+									small Стоимость разработки
+									p 2329 тыс. руб.
+								li
+									small Сроки разработки
+									p 7 мес. - пилотная версия
+					.col-12.order-xl-5
+						+e.btn-wrap
+							.row
+								.col-12.col-md-auto
+									+e.btn.btn.btn-outline-primary(href="#")
+										+icon('presentation')
+										| Скачать презентацию решения
+								.col-12.col-md-auto
+									+e.btn.btn.btn-outline-primary(href="#")
+										+icon('repository')
+										| Ссылка на репозиторий
 
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
 	// #modal-call
 	
 	// end modals
