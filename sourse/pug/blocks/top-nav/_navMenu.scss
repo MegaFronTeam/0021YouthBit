@@ -116,7 +116,7 @@
 		// height: calc(var(--vh, 1vh) * 100);
 		// height: 100vh;
 		width: 280px;
-		top: rem(82);
+		top: rem(86);
 		// left: 0;
 		right: 0;
 		background-color: $white;
@@ -148,7 +148,7 @@
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
-			height: 100vh;
+			height: calc(100vh - #{rem(86)});
 			// @include mt(.3s);
 			// transition-delay: .4s;
 			// opacity: var(--opacity);

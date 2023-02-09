@@ -8,14 +8,19 @@
 	z-index: 999;
 	padding-top: rem(23);
 	padding-bottom: rem(6);
-	
+
 	&.fixed {
 		background-color: $white;
 		padding: rem(16) 0 rem(6);
 		box-shadow: 0px 0px 5px rgba($color: $primary, $alpha: 0.5);
 
 		.menu-mobile {
-			top: rem(75);
+			top: rem(79);
+			.menu-mobile__inner {
+				@include media-breakpoint-down(xl) {
+					height: calc(100vh - #{rem(79)});
+				}
+			}
 		}
 	}
 	&__row {
