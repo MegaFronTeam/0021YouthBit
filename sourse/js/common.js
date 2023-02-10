@@ -254,12 +254,12 @@ const JSCCommon = {
 	},
 	makeDDGroup() {
 
-				document.addEventListener("click", function(event){
-					let target = event.target.closest(".dd-head-js");
-					if(!target) return;
-					target.parentElement.classList.toggle('active');
-					$(target.nextElementSibling).slideToggle();
-				})
+		document.addEventListener("click", function (event) {
+			let target = event.target.closest(".dd-head-js");
+			if (!target) return;
+			target.parentElement.classList.toggle('active');
+			$(target.nextElementSibling).slideToggle();
+		})
 	},
 	imgToSVG() {
 		const convertImages = (query, callback) => {
@@ -328,7 +328,12 @@ const JSCCommon = {
 				});
 			}
 		};
-	}
+	},
+	setSidePadding() {
+		var innerWidthWithoutScrollbar = $('body').innerWidth();
+		var sideBarPadding = window.innerWidth - innerWidthWithoutScrollbar + 'px';
+		document.querySelector(':root').style.setProperty('--sideBarPadding', sideBarPadding);
+	},
 };
 const $ = jQuery;
 
@@ -342,6 +347,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	JSCCommon.animateScroll();
+	JSCCommon.setSidePadding();
 
 
 

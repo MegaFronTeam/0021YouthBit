@@ -27,17 +27,32 @@ html {
 }
 
 body {
-	&.fixed,
-	&.fancybox-active {
-		.header {
-			padding-right: var(--spacing-end);
-		}
-		margin-right: var(--spacing-end);
-	}
+	// &.fixed,
+	// &.fancybox-active {
+	// 	.header {
+	// 		padding-right: var(--spacing-end);
+	// 	}
+	// 	margin-right: var(--spacing-end);
+	// }
 	// min-width: 575px;
 	// -webkit-font-smoothing: antialiased;
 	// position: relative;
 	// overflow-x: hidden;
+	&.fixed {
+		@include media-breakpoint-up(lg) {
+			padding-right: var(--sideBarPadding);
+			.top-nav {
+				padding-right: var(--sideBarPadding);
+			}
+		}
+	}
+	&.compensate-for-scrollbar {
+		@include media-breakpoint-up(lg) {
+			.top-nav {
+				padding-right: var(--sideBarPadding);
+			}
+		}
+	}
 
 	&.loaded_hiding {
 		@include mt;
