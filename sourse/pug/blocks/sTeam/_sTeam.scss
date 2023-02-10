@@ -6,6 +6,7 @@
 	@include media-breakpoint-up(xl) {
 		--sPB: #{rem(100)};
 		--sPT: #{rem(130)};
+		min-height: rem(585);
 	}
 
 	&__row {
@@ -36,6 +37,14 @@
 		}
 		ul {
 			margin-bottom: rem(32);
+			&:last-child {
+				margin-bottom: 0;
+			}
+			li {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 	h2,
@@ -143,7 +152,6 @@
 			top: -10%;
 			left: 0;
 
-		
 			@include media-breakpoint-up(xl) {
 				left: auto;
 				right: 70%;
