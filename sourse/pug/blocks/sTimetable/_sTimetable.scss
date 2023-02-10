@@ -1,0 +1,139 @@
+// start .sTimetable
+.sTimetable {
+	--sTPB: #{rem(40)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(20)};
+	}
+	@include media-breakpoint-up(xl) {
+		--sTPB: #{rem(60)};
+		--sPT: #{rem(120)};
+		// --sPB: #{rem()};
+	}
+	@include media-breakpoint-up(xxl) {
+		// --sPB: #{rem()};
+		--sTPB: #{rem(80)};
+	}
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(24)};
+	}
+	.section-title {
+		h2 {
+			margin-bottom: rem(8);
+		}
+		p {
+			font-size: rem(20);
+			line-height: calc(23 / 20);
+			margin-bottom: rem(16);
+			color: rgba($color: #251e45, $alpha: 0.5);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__col {
+	}
+	&__heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: rem(10);
+		border-bottom: 1px solid $success;
+		margin-bottom: rem(24);
+		padding: rem(10) rem(5);
+		@include media-breakpoint-up(sm) {
+			padding: rem(10);
+		}
+		@include media-breakpoint-up(xl) {
+			// padding: rem(10);
+			margin-bottom: rem(40);
+		}
+
+		span {
+			display: block;
+			font-size: rem(18);
+			color: $primary;
+			line-height: 21px;
+			margin-right: rem(10);
+			@include media-breakpoint-up(sm) {
+				line-height: calc(23 / 20);
+				font-size: rem(20);
+			}
+			@include media-breakpoint-only(xl) {
+				line-height: 21px;
+				font-size: rem(18);
+			}
+		}
+		small {
+			display: block;
+			font-size: rem(18);
+			line-height: calc(21 / 18);
+			color: #76728a;
+		}
+	}
+	&__day {
+		ul {
+			margin-bottom: 0;
+			li {
+				@include roww(16px, m);
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: rem(24);
+				&:last-child {
+					margin-bottom: 0;
+				}
+				& > span {
+					display: block;
+					font-size: rem(15);
+					line-height: 28px;
+					width: rem(110);
+					flex-shrink: 0;
+					text-align: right;
+					font-weight: 471;
+				}
+				p {
+				}
+			}
+		}
+	}
+	&__event {
+		span {
+			display: block;
+			font-weight: 200;
+			font-size: rem(20);
+			line-height: 28px;
+			font-variation-settings: "opsz" 8, "GRAD" 0, "slnt" 0, "XTRA" 497, "XOPQ" 96, "YOPQ" 91, "YTLC" 433, "YTUC" 649,
+				"YTAS" 750, "YTDE" -177, "YTFI" 738;
+			margin-bottom: rem(16);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		p {
+			font-weight: 200;
+			font-size: rem(15);
+			line-height: calc(21 / 15);
+			font-variation-settings: "opsz" 8, "GRAD" 0, "slnt" 0, "XTRA" 497, "XOPQ" 96, "YOPQ" 91, "YTLC" 433, "YTUC" 649,
+				"YTAS" 750, "YTDE" -177, "YTFI" 738;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sTimetable
