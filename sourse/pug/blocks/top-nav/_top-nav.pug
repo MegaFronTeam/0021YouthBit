@@ -24,17 +24,17 @@ mixin top-nav()
 			+e.row.row
 				.col-auto.d-xl-none
 					+menu-toggle()
-				.col
+				.col-auto
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
 							+soc().d-xl-none
-							+e.btn.btn.btn-success.d-xl-none(href="https://lk.youthbit.ru/") Регистрация/Войти
+							+e.btn.btn.btn-success.d-xl-none(href="https://lk.youthbit.ru/") Войти
 				.col-auto.d-none.d-xl-flex
 					+soc()
 				.col-auto.d-none.d-xl-inline-block
-					+e.btn.btn.btn-success(href="https://lk.youthbit.ru/") Регистрация/Войти
+					+e.btn.btn.btn-success(href="https://lk.youthbit.ru/") Войти
 				.col-auto.order-xl-first
 					+e.logo(href="#")
 						+img('https://storage.yandexcloud.net/mp-hackathon/mb-logo.png')
