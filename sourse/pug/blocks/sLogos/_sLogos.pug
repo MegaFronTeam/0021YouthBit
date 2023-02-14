@@ -8,7 +8,7 @@ mixin sLogos(data)
 			+b.section-title
 				h2 Организаторы и Партнёры
 				
-			+e.title-sub  Организатор
+			+e.title-sub  Организаторы
 			mixin control()
 				.row.d-lg-none
 					.col
@@ -27,17 +27,19 @@ mixin sLogos(data)
 						//- 					+img("img/svg/logo-1.svg")
 						//- 			+e.title Федеральное агентство по делам молодёжи
 					+control()
+			+e.title-sub  Генеральные партнёры
+			+e.slider-wrap
+				+e.slider--partners.--general-partners-js.--js.swiper-slider.mb-0
+					.swiper-wrapper
+					+control()
+			+e.title-sub  Стратегические партнёры
+			+e.slider-wrap
+				+e.slider--partners.--strategic-partners-js.--js.swiper-slider.mb-0
+					.swiper-wrapper
+					+control()
 			+e.title-sub  Партнёры
 			+e.slider-wrap
 				+e.slider--partners.--partners-js.--js.swiper-slider.mb-0
 					.swiper-wrapper
-
-						//- - for (var x = 0; x < 10; x++)
-						//- 	+e.slide.swiper-slide
-						//- 		+e.item
-						//- 			+e.img-wrap 
-						//- 				.img-wrap-center
-						//- 					+img("img/svg/logo-1.svg")
-						//- 			+e.title Федеральное агентство по делам молодёжи
 					+control()
 	// end sLogos

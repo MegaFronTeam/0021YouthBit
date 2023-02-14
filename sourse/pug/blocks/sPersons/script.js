@@ -1,5 +1,10 @@
 function getStaff(roleName) {
-	const url = `${baseUrl}/site/staff?event=153&role=${roleName}`;
+  const staffMap = {
+    jury    : 'jury',
+    tracker : 'tracker',
+    expert  : 'expert,reviser,org_revisor',
+  }
+	const url = `${baseUrl}/site/staff?event=153&role=${staffMap[roleName]}`;
 	handleRequest(url).then(res => {
 		const arr = res.staff.sort((a, b) => a.priority >= b.priority ? -1 : 1);
 

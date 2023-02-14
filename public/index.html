@@ -694,7 +694,12 @@ getPlaygrounds();
 				<section class="sPersons section" id="sPersons">
 					<div class="container">
 						<script>function getStaff(roleName) {
-	const url = `${baseUrl}/site/staff?event=153&role=${roleName}`;
+	const staffMap = {
+		jury    : 'jury',
+		tracker : 'tracker',
+		expert  : 'expert',
+	}
+	const url = `${baseUrl}/site/staff?event=153&role=${staffMap[roleName]}`;
 	handleRequest(url).then(res => {
 		const arr = res.staff.sort((a, b) => a.priority >= b.priority ? -1 : 1);
 
@@ -719,6 +724,7 @@ getPlaygrounds();
 getStaff('expert');
 getStaff('tracker');
 getStaff('jury');
+
 						</script>
 						<div class="section-title">
 							<h2>Наставники и&nbsp;Жюри</h2>
@@ -815,6 +821,34 @@ getStaff('jury');
 
 getPartners();
 
+function getGeneralPartners() {
+	
+	const url = `${baseUrl}/site/company`;
+	handleRequest(url).then(res => {
+		const arr = res.filter(el => el.category ===
+			'Генеральные партнёры');
+		for (const item of arr) { 
+			document.querySelector(".sLogos__slider--general-partners-js .swiper-wrapper").insertAdjacentHTML("beforeend", template(item.avatar_url, item.description, item.link));
+		}
+	});
+}
+
+getGeneralPartners();
+
+function getStrategicPartners() {
+	
+	const url = `${baseUrl}/site/company`;
+	handleRequest(url).then(res => {
+		const arr = res.filter(el => el.category ===
+			'Специальные партнёры');
+		for (const item of arr) { 
+			document.querySelector(".sLogos__slider--strategic-partners-js .swiper-wrapper").insertAdjacentHTML("beforeend", template(item.avatar_url, item.description, item.link));
+		}
+	});
+}
+
+getStrategicPartners();
+
 function getOrgs() {
 	
 	const url = `${baseUrl}/site/company`;
@@ -834,10 +868,62 @@ getOrgs();
 						<div class="section-title">
 							<h2>Организаторы и Партнёры</h2>
 						</div>
-						<div class="sLogos__title-sub"> Организатор
+						<div class="sLogos__title-sub"> Организаторы
 						</div>
 						<div class="sLogos__slider-wrap">
 							<div class="sLogos__slider sLogos__slider--org sLogos__slider--org-js sLogos__slider--js swiper-slider">
+								<div class="swiper-wrapper"></div>
+									<div class="row d-lg-none">
+										<div class="col">
+											<div class="swiper-pagination"></div>
+										</div>
+										<div class="col-auto">
+											<div class="arrow-wrap">
+												<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+													<svg class="icon icon-arrow-left ">
+														<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+													</svg>
+												</div>
+												<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+							</div>
+						</div>
+						<div class="sLogos__title-sub"> Генеральные партнёры
+						</div>
+						<div class="sLogos__slider-wrap">
+							<div class="sLogos__slider sLogos__slider--partners sLogos__slider--general-partners-js sLogos__slider--js swiper-slider mb-0">
+								<div class="swiper-wrapper"></div>
+									<div class="row d-lg-none">
+										<div class="col">
+											<div class="swiper-pagination"></div>
+										</div>
+										<div class="col-auto">
+											<div class="arrow-wrap">
+												<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+													<svg class="icon icon-arrow-left ">
+														<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+													</svg>
+												</div>
+												<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+													<svg class="icon icon-arrow-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+							</div>
+						</div>
+						<div class="sLogos__title-sub"> Стратегические партнёры
+						</div>
+						<div class="sLogos__slider-wrap">
+							<div class="sLogos__slider sLogos__slider--partners sLogos__slider--strategic-partners-js sLogos__slider--js swiper-slider mb-0">
 								<div class="swiper-wrapper"></div>
 									<div class="row d-lg-none">
 										<div class="col">
