@@ -429,14 +429,29 @@ function eventHandler() {
 
 	function getStream() {
 		const url = `${baseUrl}/site/settings`;
-		console.log(url);
 		handleRequest(url)
-			.then(res => console.log({
-				show: res.find(el => el.name === 'broadcast').value_int, // Если 0 - показываем картинку, если 1 - показываем плеер
-				link: res.find(el => el.name === 'broadcast_url').value_string // ссылка для iframe плеера
-			}))
-	}
+			.then(res => {
+				res.find(el => {
+					if (el.name === 'broadcast_url') {
+						let videoBlock = document.querySelector('.headerBlock__video-wrap');
+						let createdElement = document.createElement("iframe");
+						createdElement.setAttribute("src", el.value_string);
+						videoBlock.appendChild(createdElement);
+					};
+					if (el.name === 'broadcast') {
+						let videoBlock = document.querySelector('.headerBlock__video-wrap');
+						let imgBlock = document.querySelector('.headerBlock__img-wrap');
+						if(el.value_int === 0) {
+							imgBlock.classList.add('active');
+						} else if (el.value_int === 1) {
+							videoBlock.classList.add('active');
+						}
+					}
+				})
+			});
+	};
 	getStream();
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

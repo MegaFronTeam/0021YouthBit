@@ -92,6 +92,9 @@
 		position: relative;
 		margin-bottom: 40px;
 		// z-index: 2;
+		&.active {
+			display: block;
+		}
 		&::after {
 			content: "";
 			z-index: -1;
