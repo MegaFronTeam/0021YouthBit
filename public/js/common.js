@@ -427,8 +427,16 @@ function eventHandler() {
 
 	whenResize();
 
-
-
+	function getStream() {
+		const url = `${baseUrl}/site/settings`;
+		console.log(url);
+		handleRequest(url)
+			.then(res => console.log({
+				show: res.find(el => el.name === 'broadcast').value_int, // Если 0 - показываем картинку, если 1 - показываем плеер
+				link: res.find(el => el.name === 'broadcast_url').value_string // ссылка для iframe плеера
+			}))
+	}
+	getStream();
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

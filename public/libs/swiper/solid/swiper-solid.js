@@ -1,5 +1,5 @@
 /**
- * Swiper SolidJS 8.4.6
+ * Swiper SolidJS 8.4.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: January 17, 2023
+ * Released on: January 30, 2023
  */
 
 export { Swiper } from './swiper.jsx';
