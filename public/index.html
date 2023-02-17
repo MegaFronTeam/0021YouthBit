@@ -266,7 +266,12 @@ const template = function (img, title, a) {
 									</div>
 									<ul>
 										<li><span>16:00—17:00</span>
-											<div class="sTimetable__event"><span>Торжественное открытие</span>
+											<div class="sTimetable__event">
+                        <span>
+                          <a href="https://vk.com/rosmolodez?z=video-49388164_456240671%2F0c24c8e9ed6c36b598%2Fpl_wall_-49388164">
+                            Торжественное открытие
+                          </a>
+                        </span>
 											</div>
 										</li>
 										<li><span>18:00—21:40</span>
@@ -286,7 +291,7 @@ const template = function (img, title, a) {
 												<p>К началу 2-го чек-поинта команда должна показать, как минимум, ссылку на репозиторий.</p>
 											</div>
 										</li>
-										<li><span>18:00—20:40</span>
+										<li><span>17:00—20:40</span>
 											<div class="sTimetable__event"><span>Третий чек-поинт</span>
 												<p>К старту 3-го чек-поинта,в целях осуществления контроляза прогрессом, команда должна загрузить: драфт тизера решения, ссылку на репозиторий с кодом, драфт презентации.</p>
 											</div>
@@ -304,11 +309,21 @@ const template = function (img, title, a) {
 											</div>
 										</li>
 										<li><span>12:00—18:00</span>
-											<div class="sTimetable__event"><span>Защита решений</span>
+											<div class="sTimetable__event">
+                        <span>
+                          <a href="https://vk.com/rosmolodez.business?z=video-130482053_456240091%2Fvideos-130482053%2Fpl_-130482053_-2">
+                            Защита решений
+                          </a>
+                        </span>
 											</div>
 										</li>
 										<li><span>18:00—19:00</span>
-											<div class="sTimetable__event"><span>Торжественное награждение победителей</span>
+											<div class="sTimetable__event">
+                        <span>
+                          <a href="https://vk.com/video-49388164_456240673">
+                            Торжественное награждение победителей
+                          </a>
+                        </span>
 											</div>
 										</li>
 									</ul>
@@ -697,7 +712,7 @@ getPlaygrounds();
 	const staffMap = {
 		jury    : 'jury',
 		tracker : 'tracker',
-		expert  : 'expert',
+		expert  : 'expert,reviser,org_revisor',
 	}
 	const url = `${baseUrl}/site/staff?event=153&role=${staffMap[roleName]}`;
 	handleRequest(url).then(res => {
