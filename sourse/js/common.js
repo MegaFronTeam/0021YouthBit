@@ -427,30 +427,35 @@ function eventHandler() {
 
 	whenResize();
 
-	function getStream() {
-		const url = `${baseUrl}/site/settings`;
-		handleRequest(url)
-			.then(res => {
-				res.find(el => {
-					if (el.name === 'broadcast_url') {
-						let videoBlock = document.querySelector('.headerBlock__video-wrap');
-						let createdElement = document.createElement("iframe");
-						createdElement.setAttribute("src", el.value_string);
-						videoBlock.appendChild(createdElement);
-					};
-					if (el.name === 'broadcast') {
-						let videoBlock = document.querySelector('.headerBlock__video-wrap');
-						let imgBlock = document.querySelector('.headerBlock__img-wrap');
-						if(el.value_int === 0) {
-							imgBlock.classList.add('active');
-						} else if (el.value_int === 1) {
-							videoBlock.classList.add('active');
+	let videoBlock = document.querySelector('.headerBlock__video-wrap');
+	if (videoBlock){
+
+
+		function getStream() {
+			const url = `${baseUrl}/site/settings`;
+			handleRequest(url)
+				.then(res => {
+					res.find(el => {
+						if (el.name === 'broadcast_url') {
+							let videoBlock = document.querySelector('.headerBlock__video-wrap');
+							let createdElement = document.createElement("iframe");
+							createdElement.setAttribute("src", el.value_string);
+							videoBlock.appendChild(createdElement);
+						};
+						if (el.name === 'broadcast') {
+							let videoBlock = document.querySelector('.headerBlock__video-wrap');
+							let imgBlock = document.querySelector('.headerBlock__img-wrap');
+							if(el.value_int === 0) {
+								imgBlock.classList.add('active');
+							} else if (el.value_int === 1) {
+								videoBlock.classList.add('active');
+							}
 						}
-					}
-				})
-			});
-	};
-	getStream();
+					})
+				});
+		};
+		getStream();
+	}
 	
 };
 if (document.readyState !== 'loading') {

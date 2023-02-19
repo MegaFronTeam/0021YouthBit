@@ -166,10 +166,17 @@
 	}
 } // end.sBestTeams
 
+.col-lg-4 > .best-item {
+
+	min-height: 100%;
+}
 .best-item {
 	background-color: $primary;
 	border-radius: $border-radius-lg;
 	padding: rem(16);
+	display: flex;
+	flex-direction: column;
+
 	@include media-breakpoint-up(sm) {
 		padding: rem(32);
 	}
@@ -228,6 +235,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
+		text-align: right;
 		small {
 			display: block;
 			margin-bottom: 2px;
@@ -277,6 +285,7 @@
 		font-size: rem(15);
 		line-height: calc(18 / 15);
 		color: $success;
+		margin-top: auto;
 		&:hover {
 			color: $white;
 		}
