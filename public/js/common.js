@@ -100,6 +100,12 @@ const JSCCommon = {
 
 	// tabs  .
 	tabscostume(tab) {
+		if (window.location.pathname == "/shortlist.html") {
+			$(`.tabs__content${window.location.hash}`).addClass("active").siblings().removeClass('active')
+				.closest('.tabs').find('.tabs__btn').removeClass('active')
+				.eq($(this).index()).addClass('active');
+				console.log(window.location);
+		}
 		const tabs = document.querySelectorAll(tab);
 		const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
 		tabs.forEach(element => {
@@ -140,6 +146,7 @@ const JSCCommon = {
 				});
 				JSCCommon.caseSlider();
 			})
+			
 		})
 
 		// $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {

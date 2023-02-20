@@ -554,6 +554,10 @@ iframe {
 	--bs-btn-active-border-color: #{$primary};
 }
 
+.btn-primary{
+// --bs-btn-color: #{$white};
+color: #fff !important;
+}
 .inner-page {
 	@include media-breakpoint-up(md) {
 		background-image: url(../img/svg/inner-page-bg-1.svg), url(../img/svg/inner-page-bg-2.svg);
