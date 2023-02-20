@@ -103,7 +103,7 @@ const JSCCommon = {
 		if (window.location.pathname == "/shortlist.html" && window.location.hash) {
 			$(`.tabs__content${window.location.hash}`).addClass("active").siblings().removeClass('active')
 				.closest('.tabs').find('.tabs__btn').removeClass('active')
-				.eq($(this).index()).addClass('active');
+				.eq($(`.tabs__content${window.location.hash}`).index()).addClass('active');
 				console.log(window.location);
 		}
 		const tabs = document.querySelectorAll(tab);
