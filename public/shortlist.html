@@ -247,10 +247,10 @@ const template = function (img, title, a) {
 							</div>
 						</div>
 						<ul> ${timeItems(attendees)} </ul>
-						<a class="best-item__more" href="#" data-src="modal-win${i}" data-fancybox="modal">Подробнее</a>
+						<a class="best-item__more" href="#" data-src="modal-win${i}${caseName}" data-fancybox="modal">Подробнее</a>
 					</div>
 				</div>
-				<div id="modal-win${i}" style="display: none">
+				<div id="modal-win${i}${caseName}" style="display: none">
 					<div class="modal-win">
 						<div class="winner">
 							<div class="winner__row row">

@@ -100,7 +100,7 @@ const JSCCommon = {
 
 	// tabs  .
 	tabscostume(tab) {
-		if (window.location.pathname == "/shortlist.html") {
+		if (window.location.pathname == "/shortlist.html" && window.location.hash) {
 			$(`.tabs__content${window.location.hash}`).addClass("active").siblings().removeClass('active')
 				.closest('.tabs').find('.tabs__btn').removeClass('active')
 				.eq($(this).index()).addClass('active');
