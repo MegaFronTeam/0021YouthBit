@@ -249,37 +249,37 @@ const template = function (img, title, a) {
 						<ul> ${timeItems(attendees)} </ul>
 						<a class="best-item__more" href="#" data-src="modal-win${i}${caseName}" data-fancybox="modal">Подробнее</a>
 					</div>
-				</div>
-				<div id="modal-win${i}${caseName}" style="display: none">
-					<div class="modal-win">
-						<div class="winner">
-							<div class="winner__row row">
-								<div class="col">
-									<div class="winner__content">${teaser}</div>
-								</div>
-								<div class="winner__col col-xl-auto  ">
-									<div class="best-item">
-										<ul>${timeItems(attendees)}</ul>
+					<div id="modal-win${i}${caseName}" style="display: none">
+						<div class="modal-win">
+							<div class="winner">
+								<div class="winner__row row">
+									<div class="col">
+										<div class="winner__content">${teaser}</div>
 									</div>
-								</div>
-								<div class="col-12 order-xl-5">
-									<div class="winner__btn-wrap">
-										<div class="row">
-											<div class="col-12 col-md-auto">
-												<a class="winner__btn btn btn-outline-primary" href="${presentation_url}" target="_blank">
-													<svg class="icon icon-presentation ">
-														<use xlink:href="img/svg/sprite.svg#presentation"></use>
-													</svg>Скачать презентацию решения
-												</a>
+									<div class="winner__col col-xl-auto  ">
+										<div class="best-item">
+											<ul>${timeItems(attendees)}</ul>
+										</div>
+									</div>
+									<div class="col-12 order-xl-5">
+										<div class="winner__btn-wrap">
+											<div class="row">
+												<div class="col-12 col-md-auto">
+													<a class="winner__btn btn btn-outline-primary" href="${presentation_url}" target="_blank">
+														<svg class="icon icon-presentation ">
+															<use xlink:href="img/svg/sprite.svg#presentation"></use>
+														</svg>Скачать презентацию решения
+													</a>
+												</div>
+												<!-- <div class="col-12 col-md-auto">
+													<a class="winner__btn btn btn-outline-primary" href="#">
+														<svg class="icon icon-repository ">
+															<use xlink:href="img/svg/sprite.svg#repository"></use>
+														</svg>Ссылка на репозиторий
+													</a>
+												</div>
+												-->
 											</div>
-											<!-- <div class="col-12 col-md-auto">
-												<a class="winner__btn btn btn-outline-primary" href="#">
-													<svg class="icon icon-repository ">
-														<use xlink:href="img/svg/sprite.svg#repository"></use>
-													</svg>Ссылка на репозиторий
-												</a>
-											</div>
-											-->
 										</div>
 									</div>
 								</div>
