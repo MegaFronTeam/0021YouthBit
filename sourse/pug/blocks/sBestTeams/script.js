@@ -11,7 +11,7 @@ function getWinners(caseName) { // 'onboarding', 'tourism', 'dashboard', 'assist
 		const arr = res;
 		
 		
-		const teamItem = (i, name, attendees, teaser, presentation_url) =>{
+		const teamItem = (i, name, attendees, teaser, presentation_url, solution_url) =>{
 			const classI = i;
 			let classN;
 			let grekText;
@@ -58,6 +58,18 @@ function getWinners(caseName) { // 'onboarding', 'tourism', 'dashboard', 'assist
 				}
 				return line;
 			};
+			const gitBtn = (solution_url) => {
+				if (!solution_url) return '';
+				return `
+					<div class="col-12 col-md-auto">
+						<a class="winner__btn btn btn-outline-primary" href="${solution_url}">
+							<svg class="icon icon-repository ">
+								<use xlink:href="img/svg/sprite.svg#repository"></use>
+							</svg>Ссылка на репозиторий
+						</a>
+					</div>
+				`
+ 			};
 			return `
 				<div class="col-12 col-lg-4">
 					<div class="best-item ${classN}">
@@ -93,14 +105,7 @@ function getWinners(caseName) { // 'onboarding', 'tourism', 'dashboard', 'assist
 														</svg>Скачать презентацию решения
 													</a>
 												</div>
-												<!-- <div class="col-12 col-md-auto">
-													<a class="winner__btn btn btn-outline-primary" href="#">
-														<svg class="icon icon-repository ">
-															<use xlink:href="img/svg/sprite.svg#repository"></use>
-														</svg>Ссылка на репозиторий
-													</a>
-												</div>
-												-->
+												${gitBtn(solution_url)}
 											</div>
 										</div>
 									</div>
@@ -115,8 +120,8 @@ function getWinners(caseName) { // 'onboarding', 'tourism', 'dashboard', 'assist
 		for (const item of arr) {  
 			let place = i < 3 ? `.first ` : ` .other`;
 
-
-			document.querySelector(`#${caseName} ${place}`).insertAdjacentHTML("beforeend", teamItem(i, item.name, item.attendees,item.teaser, item.presentation_url));
+			console.log(item.solution_url);
+			document.querySelector(`#${caseName} ${place}`).insertAdjacentHTML("beforeend", teamItem(i, item.name, item.attendees, item.teaser, item.presentation_url, item.solution_url));
 
 			i++;
 		}
